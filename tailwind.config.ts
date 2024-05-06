@@ -26,6 +26,9 @@ const config: Config = {
         'purple-500': 'var(--purple-500)',
         'purple-700': 'var(--purple-700)',
       },
+      screens: {
+        lg: '1024px',
+      },
     },
   },
   plugins: [],
