@@ -1,7 +1,9 @@
 'use client';
 import { useRef } from 'react';
+import Image from 'next/image';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import { preventBodyScroll } from '@/lib/utils/helpers';
 
 gsap.registerPlugin(useGSAP);
 
@@ -25,7 +27,8 @@ export default function Intro() {
   }) => {
     const timeline = gsap.timeline();
     const DURATION = 0.2;
-    const DELAY = 0.05;
+    const DELAY = 0.02;
+
     for (let i = 0; i < 4; i++) {
       timeline.to(className, {
         rotation: i % 2 === 0 ? rotation : -rotation,
@@ -35,6 +38,20 @@ export default function Intro() {
         delay: i * DELAY,
       });
     }
+  };
+
+  const setPartsAnimation = () => {
+    gsap.to('.parts', {
+      y: '-=20',
+      opacity: 1,
+      duration: 1.8,
+      delay: 1.2,
+      ease: 'elastic.out(1, 0.3)',
+      yoyo: true,
+      onComplete: () => {
+        preventBodyScroll(false);
+      },
+    });
   };
 
   const setTitleAnimation = () => {
@@ -113,8 +130,10 @@ export default function Intro() {
   };
 
   useGSAP(() => {
+    preventBodyScroll(true);
     const context = gsap.context(() => {
       setTitleAnimation();
+      setPartsAnimation();
     }, [container.current]);
     return () => {
       context.revert();
@@ -123,9 +142,27 @@ export default function Intro() {
 
   return (
     <section
-      className='uppercase leading-none'
+      className='flex h-screen items-center justify-center uppercase leading-none'
       ref={container}
     >
+      {/* TODO: 이 친구도 jsx+css로 바꾸기 */}
+      <Image
+        className='parts absolute opacity-0 -translate-x-1/2 -translate-y-1/2 lg:left-[calc(50%+200px)] lg:top-[calc(50%-230px)]'
+        src='/images/main/cloud.png'
+        width='160'
+        height='76'
+        alt='구름 이미지'
+      />
+      <Image
+        className='parts absolute opacity-0 -translate-x-1/2 -translate-y-1/2 lg:left-[calc(50%-400px)] lg:top-[calc(50%+30px)]'
+        src='/images/main/eye.png'
+        width='100'
+        height='100'
+        alt='눈동자 이미지'
+      />
+      <div className='parts absolute bg-orange-200 shadow-[-5px_5px_0px_2px_#FFADAD] rounded-[100px] opacity-0 -translate-x-1/2 -translate-y-1/2 font-black text-orange-800 uppercase lg:px-4 lg:py-3 lg:left-[calc(50%-150px)] lg:top-[calc(50%+290px)] lg:text-sm'>
+        front-end developer
+      </div>
       <div className='relative font-black text-[80px] lg:text-[250px]'>
         <h1 className='title-p absolute -translate-x-1/2 -translate-y-1/2 -rotate-[17.38deg] text-purple-300 lg:left-[calc(50%-320px)] lg:top-[calc(50%-130px)]'>
           p

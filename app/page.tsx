@@ -2,8 +2,9 @@ import { Intro } from '@/components';
 
 export default function Home() {
   return (
-    <main className='flex h-screen items-center justify-center'>
+    <main>
       <Intro />
+      <section className='h-screen'></section>
     </main>
   );
 }
