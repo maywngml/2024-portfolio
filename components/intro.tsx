@@ -40,7 +40,7 @@ export default function Intro() {
     }
   };
 
-  const setTitleAnimation = () => {
+  const setTitleAnimationPc = () => {
     moveLeftAndRight({
       className: '.title-p',
       startX: 30,
@@ -115,6 +115,89 @@ export default function Intro() {
     });
   };
 
+  const setTitleAnimationMobile = () => {
+    moveLeftAndRight({
+      className: '.title-p',
+      startX: 0,
+      startY: 5,
+      addX: 3,
+      addY: 3,
+      rotation: 20,
+    });
+    moveLeftAndRight({
+      className: '.title-first-o',
+      startX: -30,
+      startY: 5,
+      addX: 0,
+      addY: 3,
+      rotation: -10,
+    });
+    moveLeftAndRight({
+      className: '.title-r',
+      startX: -30,
+      startY: 4,
+      addX: -3,
+      addY: 4,
+      rotation: -10,
+    });
+    moveLeftAndRight({
+      className: '.title-t',
+      startX: 0,
+      startY: 6,
+      addX: -6,
+      addY: 4,
+      rotation: 3,
+    });
+    moveLeftAndRight({
+      className: '.title-f',
+      startX: 5,
+      startY: 0,
+      addX: 5,
+      addY: -3,
+      rotation: 20,
+    });
+    moveLeftAndRight({
+      className: '.title-second-o',
+      startX: -24,
+      startY: 0,
+      addX: 2,
+      addY: -4,
+      rotation: 10,
+    });
+    moveLeftAndRight({
+      className: '.title-l',
+      startX: 0,
+      startY: 0,
+      addX: 0,
+      addY: -3,
+      rotation: -5,
+    });
+    moveLeftAndRight({
+      className: '.title-i',
+      startX: -10,
+      startY: 0,
+      addX: -5,
+      addY: -3,
+      rotation: 5,
+    });
+    moveLeftAndRight({
+      className: '.title-third-o',
+      startX: -35,
+      startY: 0,
+      addX: -10,
+      addY: -3,
+      rotation: 10,
+    });
+  };
+
+  const setTitleAnimation = (isPc: boolean) => {
+    if (isPc) {
+      setTitleAnimationPc();
+    } else {
+      setTitleAnimationMobile();
+    }
+  };
+
   const setPartsAnimation = () => {
     gsap.to('.parts', {
       y: '-=20',
@@ -130,20 +213,30 @@ export default function Intro() {
   };
 
   const setBottomArrowAnimation = () => {
-    const timleine = gsap.timeline();
-    timleine
-      .to('.bottom-arrow', { opacity: 1, delay: 2.3 })
-      .to('.bottom-arrow', {
-        x: '100',
-        rotate: 360,
-        duration: 2,
-      });
+    gsap.to('.bottom-arrow', {
+      x: '100',
+      opacity: 1,
+      delay: 2.3,
+      rotate: 360,
+      duration: 2,
+    });
   };
 
   useGSAP(() => {
     preventBodyScroll(true);
+    const matchMedia = gsap.matchMedia();
     const context = gsap.context(() => {
-      setTitleAnimation();
+      matchMedia.add(
+        {
+          isMobile: '(max-width: 1023px)',
+          isPc: '(min-width: 1024px)',
+        },
+        (context) => {
+          if (context.conditions) {
+            setTitleAnimation(context.conditions.isPc);
+          }
+        }
+      );
       setPartsAnimation();
       setBottomArrowAnimation();
     }, [container.current]);
@@ -176,7 +269,7 @@ export default function Intro() {
         front-end developer
       </div>
       <svg
-        className='bottom-arrow absolute opacity-0 left-[calc(50%-100px)] -translate-x-1/2 z-10 lg:bottom-8 lg:w-20 lg:h-20'
+        className='bottom-arrow w-[50px] h-[50px] absolute opacity-0 left-[calc(50%-100px)] -translate-x-1/2 z-10 lg:w-20 lg:h-20 lg:bottom-8'
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 24 24'
       >
@@ -196,31 +289,31 @@ export default function Intro() {
       </svg>
 
       <div className='relative font-black text-[80px] lg:text-[250px]'>
-        <h1 className='title-p absolute -translate-x-1/2 -translate-y-1/2 -rotate-[17.38deg] text-purple-300 lg:left-[calc(50%-320px)] lg:top-[calc(50%-150px)]'>
+        <h1 className='title-p absolute left-[calc(50%-105px)] top-[calc(50%-50px)] -translate-x-1/2 -translate-y-1/2 -rotate-[17.38deg] text-purple-300 lg:left-[calc(50%-320px)] lg:top-[calc(50%-150px)]'>
           p
         </h1>
-        <h1 className='title-first-o absolute -translate-x-1/2 -translate-y-1/2 -rotate-[5.17deg] text-beige-400 lg:left-[calc(50%-100px)] lg:top-[calc(50%-170px)]'>
+        <h1 className='title-first-o absolute left-[calc(50%-35px)] top-[calc(50%-50px)] -translate-x-1/2 -translate-y-1/2 -rotate-[5.17deg] text-beige-400 lg:left-[calc(50%-100px)] lg:top-[calc(50%-170px)]'>
           o
         </h1>
-        <h1 className='title-r absolute -translate-x-1/2 -translate-y-1/2 rotate-[9.35deg] text-purple-700 lg:left-[calc(50%+150px)] lg:top-[calc(50%-170px)]'>
+        <h1 className='title-r absolute left-[calc(50%+45px)] top-[calc(50%-50px)] -translate-x-1/2 -translate-y-1/2 rotate-[9.35deg] text-purple-700 lg:left-[calc(50%+150px)] lg:top-[calc(50%-170px)]'>
           r
         </h1>
-        <h1 className='title-t absolute -translate-x-1/2 -translate-y-1/2 -rotate-[1.46deg] text-purple-500 lg:left-[calc(50%+370px)] lg:top-[calc(50%-170px)]'>
+        <h1 className='title-t absolute left-[calc(50%+115px)] top-[calc(50%-50px)] -translate-x-1/2 -translate-y-1/2 -rotate-[1.46deg] text-purple-500 lg:left-[calc(50%+370px)] lg:top-[calc(50%-170px)]'>
           t
         </h1>
-        <h1 className='title-f absolute -translate-x-1/2 -translate-y-1/2 -rotate-[17.38deg] text-purple-700 lg:left-[calc(50%-400px)] lg:top-[calc(50%+130px)]'>
+        <h1 className='title-f absolute left-[calc(50%-125px)] top-[calc(50%+50px)] -translate-x-1/2 -translate-y-1/2 -rotate-[17.38deg] text-purple-700 lg:left-[calc(50%-400px)] lg:top-[calc(50%+130px)]'>
           f
         </h1>
-        <h1 className='title-second-o absolute -translate-x-1/2 -translate-y-1/2 -rotate-[5.17deg] text-purple-300 lg:left-[calc(50%-170px)] lg:top-[calc(50%+130px)]'>
+        <h1 className='title-second-o absolute left-[calc(50%-55px)] top-[calc(50%+50px)] -translate-x-1/2 -translate-y-1/2 -rotate-[5.17deg] text-purple-300 lg:left-[calc(50%-170px)] lg:top-[calc(50%+130px)]'>
           o
         </h1>
-        <h1 className='title-l absolute -translate-x-1/2 -translate-y-1/2 -rotate-[0.07deg] text-beige-400 lg:left-[calc(50%+50px)] lg:top-[calc(50%+130px)]'>
+        <h1 className='title-l absolute left-[calc(50%+15px)] top-[calc(50%+50px)] -translate-x-1/2 -translate-y-1/2 -rotate-[0.07deg] text-beige-400 lg:left-[calc(50%+50px)] lg:top-[calc(50%+130px)]'>
           l
         </h1>
-        <h1 className='title-i absolute -translate-x-1/2 -translate-y-1/2 -rotate-[5.17deg] text-purple-300 lg:left-[calc(50%+230px)] lg:top-[calc(50%+130px)]'>
+        <h1 className='title-i absolute left-[calc(50%+65px)] top-[calc(50%+50px)] -translate-x-1/2 -translate-y-1/2 -rotate-[5.17deg] text-purple-300 lg:left-[calc(50%+230px)] lg:top-[calc(50%+130px)]'>
           i
         </h1>
-        <h1 className='title-third-o absolute  -translate-x-1/2 -translate-y-1/2 rotate-[11.23deg] text-purple-700 lg:left-[calc(50%+380px)] lg:top-[calc(50%+150px)]'>
+        <h1 className='title-third-o absolute left-[calc(50%+135px)] top-[calc(50%+50px)] -translate-x-1/2 -translate-y-1/2 rotate-[11.23deg] text-purple-700 lg:left-[calc(50%+380px)] lg:top-[calc(50%+150px)]'>
           o
         </h1>
       </div>
