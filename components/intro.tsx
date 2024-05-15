@@ -212,9 +212,9 @@ export default function Intro() {
     });
   };
 
-  const setBottomArrowAnimation = () => {
+  const setBottomArrowAnimation = (isPc: boolean) => {
     gsap.to('.bottom-arrow', {
-      x: '100',
+      x: isPc ? '90' : '30',
       opacity: 1,
       delay: 2.3,
       rotate: 360,
@@ -234,11 +234,11 @@ export default function Intro() {
         (context) => {
           if (context.conditions) {
             setTitleAnimation(context.conditions.isPc);
+            setPartsAnimation();
+            setBottomArrowAnimation(context.conditions.isPc);
           }
         }
       );
-      setPartsAnimation();
-      setBottomArrowAnimation();
     }, [container.current]);
     return () => {
       context.revert();
@@ -246,30 +246,34 @@ export default function Intro() {
   }, []);
 
   return (
+    // TODO: 아이폰 사파리 주소창 대응해서 h-screen 수정해야함
     <section
       className='flex h-screen items-center justify-center uppercase leading-none'
       ref={container}
     >
-      {/* TODO: 이 친구도 jsx+css로 바꾸기 */}
-      <Image
-        className='parts absolute opacity-0 -translate-x-1/2 -translate-y-1/2 lg:left-[calc(50%+200px)] lg:top-[calc(50%-240px)]'
-        src='/images/main/cloud.png'
-        width='160'
-        height='76'
-        alt='구름 이미지'
-      />
-      <Image
-        className='parts absolute opacity-0 -translate-x-1/2 -translate-y-1/2 lg:left-[calc(50%-400px)] lg:top-[calc(50%+20px)]'
-        src='/images/main/eye.png'
-        width='100'
-        height='100'
-        alt='눈동자 이미지'
-      />
-      <div className='parts absolute bg-orange-200 shadow-[-5px_5px_0px_2px_#FFADAD] rounded-[100px] opacity-0 -translate-x-1/2 -translate-y-1/2 font-black text-orange-800 uppercase lg:px-4 lg:py-3 lg:left-[calc(50%-150px)] lg:top-[calc(50%+270px)] lg:text-sm'>
+      <div className='parts absolute opacity-0 w-[100px] h-[46px] left-[calc(50%+65px)] top-[calc(50%-85px)] -translate-x-1/2 -translate-y-1/2 lg:w-40 lg:h-[76px] lg:left-[calc(50%+200px)] lg:top-[calc(50%-240px)]'>
+        <Image
+          src='/images/main/cloud.png'
+          fill
+          priority
+          sizes='100%'
+          alt='구름 이미지'
+        />
+      </div>
+      <div className='parts absolute w-12 h-12 opacity-0 left-[calc(50%-150px)] top-[calc(50%+15px)] -translate-x-1/2 -translate-y-1/2 lg:w-[100px] lg:h-[100px] lg:left-[calc(50%-400px)] lg:top-[calc(50%+20px)]'>
+        <Image
+          src='/images/main/eye.png'
+          priority
+          fill
+          sizes='100%'
+          alt='눈동자 이미지'
+        />
+      </div>
+      <div className='parts absolute opacity-0 px-3 py-2 left-1/2 top-[calc(50%+125px)] bg-orange-200 shadow-[-5px_5px_0px_2px_#FFADAD] rounded-[100px] -translate-x-1/2 -translate-y-1/2 font-black text-orange-800 text-xs uppercase lg:px-4 lg:py-3 lg:left-[calc(50%-150px)] lg:top-[calc(50%+270px)] lg:text-sm'>
         front-end developer
       </div>
       <svg
-        className='bottom-arrow w-[50px] h-[50px] absolute opacity-0 left-[calc(50%-100px)] -translate-x-1/2 z-10 lg:w-20 lg:h-20 lg:bottom-8'
+        className='bottom-arrow w-[50px] h-[50px] absolute opacity-0 left-[calc(50%-50px)] bottom-8 -translate-x-1/2 z-10 lg:w-20 lg:h-20 lg:left-[calc(50%-100px)]'
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 24 24'
       >
@@ -282,7 +286,7 @@ export default function Intro() {
         <path
           className='stroke-red-100 fill-none'
           d='M 12,6 L 12,18 M 16,14 L 12,18 L 8,14'
-          strokeWidth='1'
+          strokeWidth='1.5'
           strokeLinecap='round'
           strokeLinejoin='round'
         />
