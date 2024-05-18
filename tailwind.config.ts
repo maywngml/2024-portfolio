@@ -29,6 +29,9 @@ const config: Config = {
       screens: {
         lg: '1024px',
       },
+      height: {
+        fullHeight: 'var(--fullHeight)',
+      },
     },
   },
   plugins: [],

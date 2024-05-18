@@ -17,6 +17,7 @@
   --purple-300: #dfccfb;
   --purple-500: #d0bfff;
   --purple-700: #beadfa;
+  --fullHeight: 100vh;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,6 +31,7 @@
 body {
   color: rgb(var(--foreground-rgb));
   background-color: var(--beige-50);
+  overflow-x: hidden;
 }
 
 @layer utilities {
