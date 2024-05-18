@@ -31,6 +31,7 @@ const config: Config = {
       },
       screens: {
         lg: '1024px',
+        xl: '1400px',
       },
       height: {
         fullHeight: 'var(--fullHeight)',
