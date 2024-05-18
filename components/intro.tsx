@@ -1,6 +1,7 @@
 'use client';
 import { useRef } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { preventBodyScroll } from '@/lib/utils/helpers';
@@ -206,9 +207,6 @@ export default function Intro() {
       delay: 1.2,
       ease: 'elastic.out(1, 0.3)',
       yoyo: true,
-      onComplete: () => {
-        preventBodyScroll(false);
-      },
     });
   };
 
@@ -219,6 +217,9 @@ export default function Intro() {
       delay: 2.3,
       rotate: 360,
       duration: 2,
+      onComplete: () => {
+        preventBodyScroll(false);
+      },
     });
   };
 
@@ -246,9 +247,8 @@ export default function Intro() {
   }, []);
 
   return (
-    // TODO: 아이폰 사파리 주소창 대응해서 h-screen 수정해야함
     <section
-      className='flex h-screen items-center justify-center uppercase leading-none'
+      className='flex h-fullHeight items-center justify-center uppercase leading-none'
       ref={container}
     >
       <div className='parts absolute opacity-0 w-[100px] h-[46px] left-[calc(50%+65px)] top-[calc(50%-85px)] -translate-x-1/2 -translate-y-1/2 lg:w-40 lg:h-[76px] lg:left-[calc(50%+200px)] lg:top-[calc(50%-240px)]'>
@@ -269,29 +269,30 @@ export default function Intro() {
           alt='눈동자 이미지'
         />
       </div>
-      <div className='parts absolute opacity-0 px-3 py-2 left-1/2 top-[calc(50%+125px)] bg-orange-200 shadow-[-5px_5px_0px_2px_#FFADAD] rounded-[100px] -translate-x-1/2 -translate-y-1/2 font-black text-orange-800 text-xs uppercase lg:px-4 lg:py-3 lg:left-[calc(50%-150px)] lg:top-[calc(50%+270px)] lg:text-sm'>
+      <div className='parts absolute opacity-0 px-3 py-2 min-w-[180px] left-1/2 top-[calc(50%+125px)] bg-orange-200 shadow-[-5px_5px_0px_2px_#FFADAD] rounded-[100px] -translate-x-1/2 -translate-y-1/2 font-black text-orange-800 text-xs uppercase lg:px-4 lg:py-3 lg:left-[calc(50%-150px)] lg:top-[calc(50%+270px)] lg:text-sm'>
         front-end developer
       </div>
-      <svg
-        className='bottom-arrow w-[50px] h-[50px] absolute opacity-0 left-[calc(50%-50px)] bottom-8 -translate-x-1/2 z-10 lg:w-20 lg:h-20 lg:left-[calc(50%-100px)]'
-        xmlns='http://www.w3.org/2000/svg'
-        viewBox='0 0 24 24'
-      >
-        <circle
-          className='fill-beige-400'
-          cx='50%'
-          cy='50%'
-          r='50%'
-        />
-        <path
-          className='stroke-red-100 fill-none'
-          d='M 12,6 L 12,18 M 16,14 L 12,18 L 8,14'
-          strokeWidth='1.5'
-          strokeLinecap='round'
-          strokeLinejoin='round'
-        />
-      </svg>
-
+      <Link href='#introduction'>
+        <svg
+          className='bottom-arrow w-[50px] h-[50px] absolute opacity-0 left-[calc(50%-50px)] bottom-8 -translate-x-1/2 z-10 lg:w-20 lg:h-20 lg:left-[calc(50%-100px)]'
+          xmlns='http://www.w3.org/2000/svg'
+          viewBox='0 0 24 24'
+        >
+          <circle
+            className='fill-beige-400'
+            cx='50%'
+            cy='50%'
+            r='50%'
+          />
+          <path
+            className='stroke-red-100 fill-none'
+            d='M 12,6 L 12,18 M 16,14 L 12,18 L 8,14'
+            strokeWidth='1.5'
+            strokeLinecap='round'
+            strokeLinejoin='round'
+          />
+        </svg>
+      </Link>
       <div className='relative font-black text-[80px] lg:text-[250px]'>
         <h1 className='title-p absolute left-[calc(50%-105px)] top-[calc(50%-50px)] -translate-x-1/2 -translate-y-1/2 -rotate-[17.38deg] text-purple-300 lg:left-[calc(50%-320px)] lg:top-[calc(50%-150px)]'>
           p
