@@ -22,15 +22,24 @@ const config: Config = {
         'orange-800': 'var(--orange-800)',
         'red-100': 'var(--red-100)',
         'red-500': 'var(--red-500)',
+        'red-700': 'var(--red-700)',
         'purple-300': 'var(--purple-300)',
         'purple-500': 'var(--purple-500)',
         'purple-700': 'var(--purple-700)',
+        'yellow-300': 'var(--yellow-300)',
+        'green-500': 'var(--green-500)',
       },
       screens: {
         lg: '1024px',
       },
       height: {
         fullHeight: 'var(--fullHeight)',
+      },
+      minHeight: {
+        fullHeight: 'var(--fullHeight)',
+      },
+      lineHeight: {
+        normal: 'normal',
       },
     },
   },
