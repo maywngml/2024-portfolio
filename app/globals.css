@@ -43,6 +43,24 @@ body {
   word-break: keep-all;
 }
 
+::-moz-selection {
+  background: #ffadad;
+  color: #fff;
+}
+::selection {
+  background: #ffadad;
+  color: #fff;
+}
+
+img {
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
