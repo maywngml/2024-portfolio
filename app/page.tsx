@@ -1,11 +1,18 @@
-import { Intro, Introduction } from '@/components';
+import { Intro, Introduction, Project } from '@/components';
+import { projects } from '@/data/project';
 
 export default function Home() {
   return (
     <main>
-      {/* TODO: NNN에 넣었던 스크롤 효과 추가? 아니면 gsap으로 스크롤 부드럽게 넘기는 효과 추가? */}
       <Intro />
       <Introduction />
+      {projects.map((project, index: number) => (
+        <Project
+          project={project}
+          index={index + 1}
+          key={`project-${index}`}
+        />
+      ))}
     </main>
   );
 }
