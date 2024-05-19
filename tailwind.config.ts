@@ -28,8 +28,10 @@ const config: Config = {
         'purple-700': 'var(--purple-700)',
         'yellow-300': 'var(--yellow-300)',
         'green-500': 'var(--green-500)',
+        'black-500': 'var(--black-500)',
       },
       screens: {
+        md: '600px',
         lg: '1024px',
         xl: '1400px',
       },
