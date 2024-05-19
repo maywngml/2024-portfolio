@@ -4,7 +4,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { preventBodyScroll } from '@/lib/utils/helpers';
 
 gsap.registerPlugin(useGSAP);
 
@@ -217,14 +216,10 @@ export default function Intro() {
       delay: 2.3,
       rotate: 360,
       duration: 2,
-      onComplete: () => {
-        preventBodyScroll(false);
-      },
     });
   };
 
   useGSAP(() => {
-    preventBodyScroll(true);
     const matchMedia = gsap.matchMedia();
     const context = gsap.context(() => {
       matchMedia.add(
