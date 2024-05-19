@@ -160,6 +160,7 @@ export default function Introduction() {
                     </p>
                     <Link
                       className='flex justify-between items-center w-[100px] lg:w-[120px]'
+                      target='_blank'
                       href={study.reference.url}
                     >
                       <Image
