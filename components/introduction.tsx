@@ -184,18 +184,19 @@ export default function Introduction() {
                 >
                   contact
                 </p>
-                {/* TODO: Link로 클릭 시 각 연락처에 맞는 액션 발생하도록 */}
-                {contacts.map(({ title, content }: Contact, index) => (
+                {contacts.map(({ title, content, url }: Contact, index) => (
                   <Fragment>
                     <p className='uppercase font-medium lg:mt-1 lg:text-xl lg:leading-normal'>
                       {title}
                     </p>
-                    <p
-                      key={index}
+                    <Link
                       className='font-light lg:mt-1 lg:text-xl lg:leading-normal'
+                      href={url}
+                      target='_blank'
+                      key={`contact-${index}`}
                     >
                       {content}
-                    </p>
+                    </Link>
                   </Fragment>
                 ))}
               </article>

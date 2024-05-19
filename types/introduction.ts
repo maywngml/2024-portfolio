@@ -24,6 +24,7 @@ export type Study = {
 export type Contact = {
   title: string;
   content: string;
+  url: string;
 };
 
 export type SkillItem = {

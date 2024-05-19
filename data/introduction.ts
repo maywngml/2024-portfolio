@@ -43,14 +43,17 @@ export const contacts: Contact[] = [
   {
     title: 'phone',
     content: '+82)010-4640-6319',
+    url: 'tel:+82-010-4640-6319',
   },
   {
     title: 'email',
     content: 'sjuhee9712@gmail.com',
+    url: 'mailto:sjuhee9712@gmail.com',
   },
   {
     title: 'github',
     content: 'https://github.com/maywngml',
+    url: 'https://github.com/maywngml',
   },
 ];
 
