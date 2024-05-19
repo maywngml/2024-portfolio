@@ -1,8 +1,8 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { Tektur } from 'next/font/google';
 import cn from 'clsx';
 import { GlobeAltIcon } from '@heroicons/react/24/outline';
+import { ImageWithPlaceholder } from '@/components';
 import type { Project } from '@/types/project';
 
 interface ProjectProps {
@@ -56,13 +56,13 @@ export default function Project({ project, index }: ProjectProps) {
         </div>
         <div className='px-2 py-4 lg:px-10 lg:py-4 lg:basis-1/2'>
           <div className='relative mb-2 w-full h-[250px] md:h-[400px] lg:h-[500px] lg:mb-3'>
-            <Image
+            <ImageWithPlaceholder
               className='object-cover rounded-[20px]'
               src={thumbnail}
               fill
               sizes='100%'
               alt={`${title} 썸네일 이미지`}
-            ></Image>
+            ></ImageWithPlaceholder>
           </div>
           <Link
             className='flex mb-4 gap-1 items-center lg:mb-6'
