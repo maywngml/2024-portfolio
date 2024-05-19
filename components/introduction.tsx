@@ -64,14 +64,14 @@ export default function Introduction() {
         <div className='lg:flex'>
           <div className='lg:border-r lg:border-black lg:basis-1/2 xl:basis-3/5'>
             <article className='px-4 py-5 border-b border-black lg:px-9 lg:py-7'>
-              <h2
+              <p
                 className={cn(
                   tektur.className,
                   'mb-1 uppercase font-black text-xl text-purple-700 leading-5 lg:text-2xl'
                 )}
               >
                 introduction
-              </h2>
+              </p>
               <p className='leading-normal lg:text-xl'>{introduction}</p>
               {/* TODO: 이력서 파일 추가 */}
               <Link
@@ -88,14 +88,14 @@ export default function Introduction() {
               <div className='flex xl:basis-2/3'>
                 <div className='border-r border-black basis-1/2'>
                   <article className='px-4 py-5 border-b border-black lg:px-9 lg:py-7'>
-                    <h2
+                    <p
                       className={cn(
                         tektur.className,
                         'mb-1 uppercase font-black text-xl text-purple-700 leading-5 lg:text-2xl'
                       )}
                     >
                       experience
-                    </h2>
+                    </p>
                     {experience.map(
                       ({ period, name, job }: Experience, index) => (
                         <Fragment>
@@ -113,14 +113,14 @@ export default function Introduction() {
                     )}
                   </article>
                   <article className='px-4 py-5 lg:px-9 lg:py-7'>
-                    <h2
+                    <p
                       className={cn(
                         tektur.className,
                         'mb-1 uppercase font-black text-xl text-purple-700 leading-5 lg:text-2xl'
                       )}
                     >
                       mbti
-                    </h2>
+                    </p>
                     <p className='uppercase lg:text-xl lg:leading-normal'>
                       {mbti}
                     </p>
@@ -128,14 +128,14 @@ export default function Introduction() {
                 </div>
                 <div className='basis-1/2 xl:border-r xl:border-black'>
                   <article className='px-4 py-5 border-b border-black lg:px-9 lg:py-7'>
-                    <h2
+                    <p
                       className={cn(
                         tektur.className,
                         'mb-1 uppercase font-black text-xl text-purple-700 leading-5 lg:text-2xl'
                       )}
                     >
                       education
-                    </h2>
+                    </p>
                     <p className='mb-1 text-sm leading-normal lg:mb-0 lg:text-base lg:leading-normal'>
                       {education.period}
                     </p>
@@ -147,14 +147,14 @@ export default function Introduction() {
                     </span>
                   </article>
                   <article className='px-4 py-5 lg:px-9 lg:py-7'>
-                    <h2
+                    <p
                       className={cn(
                         tektur.className,
                         'mb-1 uppercase font-black text-xl text-purple-700 leading-5 lg:text-2xl'
                       )}
                     >
                       study
-                    </h2>
+                    </p>
                     <p className='text-sm lg:text-base lg:leading-normal'>
                       {study.period}
                     </p>
@@ -176,14 +176,15 @@ export default function Introduction() {
                 </div>
               </div>
               <article className='px-4 py-5 border-t border-b border-black lg:px-9 lg:py-7 lg:border-b-0 xl:basis-1/3 xl:border-t-0'>
-                <h2
+                <p
                   className={cn(
                     tektur.className,
                     'mb-1 uppercase font-black text-xl text-purple-700 leading-5 lg:text-2xl'
                   )}
                 >
                   contact
-                </h2>
+                </p>
+                {/* TODO: Link로 클릭 시 각 연락처에 맞는 액션 발생하도록 */}
                 {contacts.map(({ title, content }: Contact, index) => (
                   <Fragment>
                     <p className='uppercase font-medium lg:mt-1 lg:text-xl lg:leading-normal'>
@@ -201,14 +202,14 @@ export default function Introduction() {
             </div>
           </div>
           <div className='px-4 py-5 lg:basis-1/2 lg:px-9 lg:py-7 xl:basis-2/5'>
-            <h2
+            <p
               className={cn(
                 tektur.className,
                 'mb-1 uppercase font-black text-xl text-purple-700 leading-5 lg:text-2xl'
               )}
             >
               skills
-            </h2>
+            </p>
             {skills.map(({ type, items }: Skill, outerIndex: number) => (
               <div
                 className='mt-1'
@@ -224,7 +225,7 @@ export default function Introduction() {
                       src={icon}
                       width={30}
                       height={30}
-                      alt={`${title} 아이콘`}
+                      alt={`${title} 로고`}
                     />
                     <span className='text-sm lg:text-base'>{title}</span>
                   </div>
