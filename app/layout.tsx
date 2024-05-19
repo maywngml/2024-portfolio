@@ -15,7 +15,7 @@ export const metadata: Metadata = {
       '코드로 그림 그리는 것을 좋아하는 프론트엔드 개발자 서주희입니다.',
     images: [
       {
-        url: '/images/og-thumbnail.png',
+        url: 'https://i.ibb.co/mhYXpyW/og-thumbnail.png',
         width: 1200,
         height: 630,
         alt: '포트폴리오 메인 이미지',
