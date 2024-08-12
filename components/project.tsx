@@ -13,13 +13,20 @@ interface ProjectProps {
 const tektur = Tektur({ subsets: ['latin'] });
 
 export default function Project({ project, index }: ProjectProps) {
-  const { title, stacks, overview, roles, achievements, thumbnails, website } =
-    project;
+  const {
+    title,
+    stacks,
+    overview,
+    details,
+    achievements,
+    thumbnails,
+    website,
+  } = project;
 
   return (
     <section className='flex px-5 py-10 justify-center min-h-fullHeight lg:px-14 lg:py-16'>
       <div className='flex flex-1 flex-col border-y border-black lg:flex-row xl:max-w-[1500px]'>
-        <div className='px-2 py-4 border-b border-black lg:px-10 lg:py-4 lg:basis-1/2 lg:border-r lg:border-b-0'>
+        <article className='px-2 py-4 border-b border-black lg:px-10 lg:py-4 lg:basis-1/2 lg:border-r lg:border-b-0'>
           <p
             className={cn(
               tektur.className,
@@ -42,18 +49,16 @@ export default function Project({ project, index }: ProjectProps) {
           <p className='mb-7 leading-normal lg:mb-20 lg:text-xl lg:leading-normal'>
             {overview}
           </p>
-          <p className='font-bold lg:text-xl'>Key Roles</p>
-          <ol className='pl-6 list-decimal lg:pl-7'>
-            {roles.map((role, index) => (
-              <li
-                className='leading-normal lg:mb-1 lg:text-xl lg:leading-normal'
-                key={`${title}-role-${index}`}
-              >
-                {role}
-              </li>
-            ))}
-          </ol>
-        </div>
+          <p className='font-bold lg:text-xl'>Details</p>
+          {details.map((detail, index) => (
+            <p
+              className='leading-normal lg:mb-[6px] lg:text-xl lg:leading-normal'
+              key={`${project.title} 상세 설명 ${index}`}
+            >
+              {detail}
+            </p>
+          ))}
+        </article>
         <div className='px-2 py-4 lg:px-10 lg:py-4 lg:basis-1/2'>
           <ProjectImageSlider
             title={title}
