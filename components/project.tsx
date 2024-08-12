@@ -23,7 +23,7 @@ export default function Project({ project, index }: ProjectProps) {
           <p
             className={cn(
               tektur.className,
-              'mb-2 uppercase font-black text-purple-700 text-[60px] leading-[60px] lg:text-[80px] lg:leading-[100px] xl:text-[100px]'
+              'mb-2 uppercase font-black text-purple-700 text-[60px] leading-[60px] lg:text-[76px] lg:leading-[76px] xl:text-[96px]'
             )}
           >
             {index.toString().padStart(2, '0')}. {title}
