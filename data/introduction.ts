@@ -11,7 +11,7 @@ export const introduction: string =
 
 export const experience: Experience[] = [
   {
-    period: '2022.06 ~ 재직중',
+    period: '2022.06 ~ 2024.06',
     name: '예이랩스',
     job: '프론트엔드 개발',
   },
