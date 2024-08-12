@@ -23,7 +23,7 @@ export default function Project({ project, index }: ProjectProps) {
           <p
             className={cn(
               tektur.className,
-              'mb-2 uppercase font-black text-purple-700 text-[60px] leading-[60px] lg:text-[100px] lg:leading-[100px]'
+              'mb-2 uppercase font-black text-purple-700 text-[60px] leading-[60px] lg:text-[80px] lg:leading-[100px] xl:text-[100px]'
             )}
           >
             {index.toString().padStart(2, '0')}. {title}
@@ -55,7 +55,7 @@ export default function Project({ project, index }: ProjectProps) {
           </ol>
         </div>
         <div className='px-2 py-4 lg:px-10 lg:py-4 lg:basis-1/2'>
-          <div className='relative mb-2 w-full h-[250px] md:h-[400px] lg:h-[500px] lg:mb-3'>
+          <div className='relative mb-2 w-full h-[250px] md:h-[400px] lg:mb-3 lg:aspect-square xl:h-[500px]'>
             <ImageWithPlaceholder
               className='object-cover rounded-[20px]'
               src={thumbnail}
