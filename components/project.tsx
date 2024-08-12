@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { Tektur } from 'next/font/google';
 import cn from 'clsx';
 import { GlobeAltIcon } from '@heroicons/react/24/outline';
-import { ImageWithPlaceholder } from '@/components';
+import { ProjectImageSlider } from '@/components';
 import type { Project } from '@/types/project';
 
 interface ProjectProps {
@@ -13,7 +13,7 @@ interface ProjectProps {
 const tektur = Tektur({ subsets: ['latin'] });
 
 export default function Project({ project, index }: ProjectProps) {
-  const { title, stacks, overview, roles, achievements, thumbnail, website } =
+  const { title, stacks, overview, roles, achievements, thumbnails, website } =
     project;
 
   return (
@@ -55,26 +55,25 @@ export default function Project({ project, index }: ProjectProps) {
           </ol>
         </div>
         <div className='px-2 py-4 lg:px-10 lg:py-4 lg:basis-1/2'>
-          <div className='relative mb-2 w-full h-[250px] md:h-[400px] lg:mb-3 lg:aspect-square xl:h-[500px]'>
-            <ImageWithPlaceholder
-              className='object-cover rounded-[20px]'
-              src={thumbnail}
-              fill
-              sizes='100%'
-              alt={`${title} 썸네일 이미지`}
-            ></ImageWithPlaceholder>
-          </div>
-          <Link
-            className='flex mb-4 gap-1 items-center lg:mb-6'
-            href={website}
-            target='_blank'
-          >
-            <GlobeAltIcon className='w-[18px] h-[18px] lg:w-5 lg:h-5' />
-            <span className='uppercase text-sm font-medium lg:text-base'>
-              view website
-            </span>
-          </Link>
-          <p className='font-bold lg:text-xl'>Key Achievements & Results</p>
+          <ProjectImageSlider
+            title={title}
+            images={thumbnails}
+          />
+          {website && (
+            <Link
+              className='flex gap-1 items-center'
+              href={website}
+              target='_blank'
+            >
+              <GlobeAltIcon className='w-[18px] h-[18px] lg:w-5 lg:h-5' />
+              <span className='uppercase text-sm font-medium lg:text-base'>
+                view website
+              </span>
+            </Link>
+          )}
+          <p className='mt-4 font-bold lg:mt-6 lg:text-xl'>
+            Key Achievements & Results
+          </p>
           <ol className='pl-6 list-decimal lg:pl-7'>
             {achievements.map((achievement, index) => (
               <li

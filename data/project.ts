@@ -26,8 +26,13 @@ export const projects: Project[] = [
     achievements: [
       '웹사이트를 성공적으로 개발 및 런칭하여 홍콩에서 개최된 BAYC 행사에서 웹사이트를 선보이며 글로벌 커뮤니티와 소통할 수 있는 기회를 가졌습니다.',
     ],
-    thumbnail: '/images/projects/nnn.png',
-    website: 'https://dao.nnn.so',
+    thumbnails: [
+      '/images/projects/nnn.png',
+      '/images/projects/nnn-detail-1.png',
+      '/images/projects/nnn-detail-2.png',
+      '/images/projects/nnn-detail-3.png',
+      '/images/projects/nnn-detail-4.png',
+    ],
   },
   {
     title: 'sage',
@@ -54,9 +59,14 @@ export const projects: Project[] = [
     achievements: [
       '스마트 컨트랙트와의 상호작용을 통해 민팅 트랜잭션 로직을 구현하여 블록체인 기술을 효과적으로 활용해볼 수 있었습니다.',
     ],
-    thumbnail: '/images/projects/sage.png',
-    // 근데 이거 런칭전인데 넣어도 되나?? 사이트 url만 빼고 기능에 대해서 말하는게 나을 것 같은데
-    website: 'https://sage-landing-zeta.vercel.app/',
+    thumbnails: [
+      '/images/projects/sage-detail-1.png',
+      '/images/projects/sage-detail-2.png',
+      '/images/projects/sage-detail-3.png',
+      '/images/projects/sage-detail-4.png',
+      '/images/projects/sage-detail-5.png',
+      '/images/projects/sage-detail-6.png',
+    ],
   },
   {
     title: 'apetche',
@@ -69,7 +79,7 @@ export const projects: Project[] = [
     achievements: [
       '웹사이트를 성공적으로 개발 및 런칭하여 홍콩에서 개최된 BAYC 행사에서 웹사이트를 선보이며 글로벌 커뮤니티와 소통할 수 있는 기회를 가졌습니다.',
     ],
-    thumbnail: '/images/projects/apetche.png',
+    thumbnails: ['/images/projects/apetche.png'],
     website: 'https://apetche.com',
   },
   {
@@ -97,7 +107,7 @@ export const projects: Project[] = [
     achievements: [
       '웹사이트를 성공적으로 개발 및 런칭하여 홍콩에서 개최된 BAYC 행사에서 웹사이트를 선보이며 글로벌 커뮤니티와 소통할 수 있는 기회를 가졌습니다.',
     ],
-    thumbnail: '/images/projects/ape-universe.png',
+    thumbnails: ['/images/projects/ape-universe.png'],
     website: 'https://apeuniversebystarboys.xyz',
   },
   {
@@ -122,7 +132,7 @@ export const projects: Project[] = [
       '풍부한 애니메이션 효과를 적용해 사용자 경험을 높이고 회사 브랜드 이미지를 효과적으로 전달했습니다.',
       '회사 소개 및 프로젝트, 채용 공고 등 다양한 정보를 한 곳에서 명확하게 제공함으로써 클라이언트와 지원자의 이해를 돕고 효율적인 커뮤니케이션 채널을 마련했습니다.',
     ],
-    thumbnail: '/images/projects/yaylabs.png',
+    thumbnails: ['/images/projects/yaylabs.png'],
     website: 'https://yaylabs.io',
   },
   {
@@ -150,7 +160,7 @@ export const projects: Project[] = [
       '웹사이트의 성공적인 런칭으로, 더스틴 옐린(Dustin Yellin)과 아고스티노(Agostino) 작가와의 레지던시 계약을 성공적으로 체결하여 전시를 성황리에 진행할 수 있었습니다.',
       '웹사이트의 현대적인 디자인과 기능성이 아티스트들과의 협업 기회를 더욱 확장시키는데 기여하였습니다.',
     ],
-    thumbnail: '/images/projects/artivist.png',
+    thumbnails: ['/images/projects/artivist.png'],
     website: 'https://artivistglobal.com',
   },
   {
@@ -177,7 +187,7 @@ export const projects: Project[] = [
       '데이터 패칭을 위한 리액트 훅 라이브러리 SWR을 사용하여 전역 상태 관리를 간소화하여 컴포넌트 간 데이터 공유를 보다 효율적으로 처리했습니다.',
     ],
     achievements: ['수정'],
-    thumbnail: '/images/projects/starboys-nft.png',
+    thumbnails: ['/images/projects/starboys-nft.png'],
     website: 'https://starboysnft.io',
   },
 ];

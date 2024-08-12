@@ -4,6 +4,6 @@ export type Project = {
   overview: string;
   roles: string[];
   achievements: string[];
-  thumbnail: string;
-  website: string;
+  thumbnails: string[];
+  website?: string;
 };
