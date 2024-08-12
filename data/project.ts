@@ -2,7 +2,7 @@ import type { Project } from '@/types/project';
 
 export const projects: Project[] = [
   {
-    title: 'nnn',
+    title: 'nnn dao',
     stacks: [
       'NextJS',
       'React',
@@ -15,7 +15,7 @@ export const projects: Project[] = [
       'GSAP',
     ],
     overview:
-      '창작자, 투자자, 열성 팬들이 협력하여 주류 미디어의 독점을 깨뜨리고 혁신적인 콘텐츠를 선보이는 탈중앙화 자율 조직 NNN DAO의 공식 웹사이트를 개발했습니다.',
+      'NNN은 전 세계 크리에이터, 디자이너, 개발자들이 다양한 창작물을 공유하고 협업하는 글로벌 런치패드입니다. 플랫폼의 의사결정에 참여할 수 있는 NNN의 DAO 시스템을 소개하고, DAO 멤버로 신청할 수 있는 웹 애플리케이션을 만들었습니다.',
     roles: [
       '웹을 시맨틱하게 구성하고, TailwindCSS를 활용해 다양한 디바이스에서 최적화된 반응형 웹사이트를 구축했습니다.',
       'Wagmi를 사용해 사용자 지갑 연결 기능을 적용하여, 사용자들이 손쉽게 지갑을 연결하고 사용할 수 있도록 했습니다.',
