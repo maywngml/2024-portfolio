@@ -134,16 +134,14 @@ export default function Project({ project, index }: ProjectProps) {
           <p className='mt-4 font-bold lg:mt-6 lg:text-xl'>
             Key Achievements & Results
           </p>
-          <ol className='pl-6 list-decimal lg:pl-7'>
-            {achievements.map((achievement, index) => (
-              <li
-                className='leading-normal lg:mb-1 lg:text-xl lg:leading-normal'
-                key={`${title}-achievement-${index}`}
-              >
-                {achievement}
-              </li>
-            ))}
-          </ol>
+          {achievements.map((achievement, index) => (
+            <p
+              className='leading-normal lg:mb-1 lg:text-xl lg:leading-normal'
+              key={`${title}-achievement-${index}`}
+            >
+              {achievement}
+            </p>
+          ))}
         </div>
       </div>
     </section>
