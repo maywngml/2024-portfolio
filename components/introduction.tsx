@@ -52,51 +52,51 @@ export default function Introduction() {
               r='17%'
             />
           </svg>
-          <p className='uppercase font-black lg:text-xl'>juhee</p>
+          <p className='uppercase font-black lg:text-xl'>introduction</p>
         </div>
         <div className='lg:flex'>
           <div className='lg:border-r lg:border-black lg:basis-1/2 xl:basis-3/5'>
-            <article className='px-4 py-5 border-b border-black lg:px-9 lg:py-7'>
-              <p className='mb-1 uppercase font-black text-xl text-purple-700 leading-5 lg:text-2xl'>
-                introduction
+            <article className='px-4 py-5 border-b border-black lg:px-6 lg:py-7'>
+              <p className='mb-5 uppercase font-black text-lg leading-4 lg:text-xl lg:leading-5'>
+                juhee
               </p>
               <p className='leading-normal lg:text-xl'>{introduction}</p>
               {/* TODO: 이력서 파일 추가 */}
               <Link
-                className='flex justify-between items-center w-36 px-5 mt-5 py-1 bg-orange-200 lg:w-[174px] lg:mt-20 lg:px-5 lg:py-3'
+                className='flex justify-between items-center w-[136px] px-5 mt-5 py-1 bg-purple-100 lg:w-[156px] lg:mt-20 lg:px-5 lg:py-3'
                 href='/'
               >
-                <span className='uppercase font-bold text-lg text-orange-800 lg:text-2xl'>
+                <span className='uppercase font-bold text-purple-800 lg:text-xl'>
                   resume
                 </span>
-                <ArrowDownTrayIcon className='w-[18px] h-[18px] stroke-orange-800 stroke-[3px] lg:w-5 lg:h-5' />
+                <ArrowDownTrayIcon className='w-[18px] h-[18px] stroke-purple-800 stroke-[3px] lg:w-5 lg:h-5' />
               </Link>
             </article>
             <div className='flex flex-col xl:flex-row'>
               <div className='flex xl:basis-2/3'>
                 <div className='border-r border-black basis-1/2'>
-                  <article className='px-4 py-5 border-b border-black lg:px-9 lg:py-7'>
-                    <p className='mb-1 uppercase font-black text-xl text-purple-700 leading-5 lg:text-2xl'>
+                  <article className='px-4 py-5 border-b border-black lg:px-6 lg:py-7'>
+                    <p className='mb-5 uppercase font-black text-lg leading-4 lg:text-xl lg:leading-5'>
                       experience
                     </p>
                     {experience.map(
                       ({ period, name, job }: Experience, index) => (
-                        <Fragment>
-                          <p className='mt-1 text-sm leading-normal lg:text-base lg:leading-normal'>
-                            {period}
-                          </p>
-                          <p className='mr-1 lg:mr-[6px] leading-normal lg:text-xl lg:leading-normal'>
+                        <Fragment key={`experience-${index}`}>
+                          <span className='mt-1 mr-1 lg:mr-[6px] leading-normal lg:text-lg lg:leading-normal'>
                             {name}
-                          </p>
-                          <p className='text-xs leading-normal lg:text-sm lg:leading-normal'>
+                          </span>
+                          <span className='leading-normal lg:text-lg lg:leading-normal'>
                             {job}
+                          </span>
+                          <p className='mb-2 text-sm leading-normal lg:text-sm lg:leading-normal'>
+                            {period}
                           </p>
                         </Fragment>
                       )
                     )}
                   </article>
-                  <article className='px-4 py-5 lg:px-9 lg:py-7'>
-                    <p className='mb-1 uppercase font-black text-xl text-purple-700 leading-5 lg:text-2xl'>
+                  <article className='px-4 py-5 lg:px-6 lg:py-7'>
+                    <p className='mb-5 uppercase font-black text-lg leading-4 lg:text-xl lg:leading-5'>
                       mbti
                     </p>
                     <p className='uppercase lg:text-xl lg:leading-normal'>
@@ -105,12 +105,9 @@ export default function Introduction() {
                   </article>
                 </div>
                 <div className='basis-1/2 xl:border-r xl:border-black'>
-                  <article className='px-4 py-5 border-b border-black lg:px-9 lg:py-7'>
-                    <p className='mb-1 uppercase font-black text-xl text-purple-700 leading-5 lg:text-2xl'>
+                  <article className='px-4 py-5 border-b border-black lg:px-6 lg:py-7'>
+                    <p className='mb-5 uppercase font-black text-lg leading-4 lg:text-xl lg:leading-5'>
                       education
-                    </p>
-                    <p className='mb-1 text-sm leading-normal lg:mb-0 lg:text-base lg:leading-normal'>
-                      {education.period}
                     </p>
                     <span className='block leading-4 lg:inline lg:mr-2 lg:text-xl lg:leading-normal'>
                       {education.name}
@@ -118,13 +115,13 @@ export default function Introduction() {
                     <span className='leading-4 lg:text-xl lg:leading-normal'>
                       {education.major}
                     </span>
-                  </article>
-                  <article className='px-4 py-5 lg:px-9 lg:py-7'>
-                    <p className='mb-1 uppercase font-black text-xl text-purple-700 leading-5 lg:text-2xl'>
-                      study
+                    <p className='mb-1 text-sm leading-normal lg:mb-0 lg:text-base lg:leading-normal'>
+                      {education.period}
                     </p>
-                    <p className='text-sm lg:text-base lg:leading-normal'>
-                      {study.period}
+                  </article>
+                  <article className='px-4 py-5 lg:px-6 lg:py-7'>
+                    <p className='mb-5 uppercase font-black text-lg leading-4 lg:text-xl lg:leading-5'>
+                      study
                     </p>
                     <Link
                       className='flex justify-between items-center w-[100px] lg:w-[120px]'
@@ -141,11 +138,14 @@ export default function Introduction() {
                         {study.reference.title}
                       </span>
                     </Link>
+                    <p className='text-sm lg:text-base lg:leading-normal'>
+                      {study.period}
+                    </p>
                   </article>
                 </div>
               </div>
-              <article className='px-4 py-5 border-t border-b border-black lg:px-9 lg:py-7 lg:border-b-0 xl:basis-1/3 xl:border-t-0'>
-                <p className='mb-1 uppercase font-black text-xl text-purple-700 leading-5 lg:text-2xl'>
+              <article className='px-4 py-5 border-t border-b border-black lg:px-6 lg:py-7 lg:border-b-0 xl:basis-1/3 xl:border-t-0'>
+                <p className='mb-5 uppercase font-black text-lg leading-4 lg:text-xl lg:leading-5'>
                   contact
                 </p>
                 {contacts.map(({ title, content, url }: Contact, index) => (
@@ -154,7 +154,7 @@ export default function Introduction() {
                       {title}
                     </p>
                     <Link
-                      className='font-light lg:mt-1 lg:text-xl lg:leading-normal'
+                      className='lg:mt-1 lg:text-xl lg:leading-normal'
                       href={url}
                       target='_blank'
                       key={`contact-${index}`}
@@ -166,13 +166,13 @@ export default function Introduction() {
               </article>
             </div>
           </div>
-          <div className='px-4 py-5 lg:basis-1/2 lg:px-9 lg:py-7 xl:basis-2/5'>
-            <p className='mb-1 uppercase font-black text-xl text-purple-700 leading-5 lg:text-2xl'>
+          <div className='px-4 py-5 lg:basis-1/2 lg:px-6 lg:py-7 xl:basis-2/5'>
+            <p className='mb-5 uppercase font-black text-lg leading-4 lg:text-xl lg:leading-5'>
               skills
             </p>
             {skills.map(({ type, items }: Skill, outerIndex: number) => (
               <div
-                className='mt-1'
+                className='mt-7 first-of-type:mt-0'
                 key={`skill-${outerIndex}`}
               >
                 <p className='mb-2 font-medium lg:text-xl'>{type}</p>
