@@ -14,6 +14,11 @@ export const projects: Project[] = [
       'Wagmi',
       'GSAP',
     ],
+    duration: {
+      start: new Date('2024-03'),
+      end: new Date('2024-04'),
+    },
+    teamSize: '프론트엔드 1명',
     overview:
       'NNN DAO는 크리에이터, 투자자, 게이머를 위한 탈중앙화된 거버넌스 네트워크로, 게임 및 엔터테인먼트 콘텐츠의 제작, 투자, 소비 방식을 혁신하는 플랫폼입니다. 이 프로젝트에서는 NNN DAO 시스템을 소개하고, DAO 멤버 신청 기능을 제공하는 웹 애플리케이션을 개발했습니다.',
     details: [
@@ -45,6 +50,11 @@ export const projects: Project[] = [
       'Wagmi',
       'GSAP',
     ],
+    duration: {
+      start: new Date('2023-11'),
+      end: new Date('2024-01'),
+    },
+    teamSize: '프론트엔드 1명, 백엔드/블록체인 1명',
     overview:
       'AI 기술과 커뮤니티를 통해 현명한 가상 자산 투자를 돕는 플랫폼, SAGE의 공식 웹 애플리케이션을 개발했습니다.',
     details: [
@@ -91,6 +101,11 @@ export const projects: Project[] = [
       'Wagmi',
       'GSAP',
     ],
+    duration: {
+      start: new Date('2023-09'),
+      end: new Date('2023-11'),
+    },
+    teamSize: '프론트엔드 1명',
     overview:
       '스토리텔링 콘텐츠의 가치를 중요하게 여기는 글로벌 프로젝트/제품을 위해 브랜드 스토리텔링 전략을 함께 실행하는 APE UNIVERSE의 공식 웹애플리케이션을 개발했습니다. (APE UNIVERSE는 Yuga Labs로부터 MBA 라이센스를 부여받은 프로젝트입니다.)',
     details: [
@@ -115,6 +130,11 @@ export const projects: Project[] = [
       'Redux Toolkit',
       'GSAP',
     ],
+    duration: {
+      start: new Date('2023-12'),
+      end: new Date('2024-01'),
+    },
+    teamSize: '프론트엔드 1명',
     overview:
       '예이랩스에 대한 소개와 팀원 정보, 채용 공고 등을 소개하는 예이랩스 자사 공식 웹사이트를 개발했습니다.',
     details: [
@@ -140,6 +160,11 @@ export const projects: Project[] = [
       'MongoDB',
       'GSAP',
     ],
+    duration: {
+      start: new Date('2023-04'),
+      end: new Date('2023-05'),
+    },
+    teamSize: '프론트엔드 1명',
     overview:
       '예술 후원회, 예술가 레지던시 프로그램, 전시 공간으로 구성된 예술 문화단체인 ARTIVIST 공식 웹 애플리케이션을 개발하였습니다.',
     details: [
@@ -181,4 +206,36 @@ export const projects: Project[] = [
   //   thumbnails: ['/images/projects/starboys-nft.png'],
   //   website: 'https://starboysnft.io',
   // },
+  {
+    title: 'portfolio',
+    stacks: [
+      'NextJS',
+      'React',
+      'HTML',
+      'CSS',
+      'Typescript',
+      'TailwindCSS',
+      'GSAP',
+    ],
+    duration: {
+      start: new Date('2024-05'),
+      end: new Date('2024-05'),
+    },
+    teamSize: '디자인/프론트엔드 1명',
+    overview:
+      '제 포트폴리오 용도로 만든 웹사이트이며 현재 보고 계신 이 사이트입니다.',
+    details: [
+      '이 프로젝트는 제 자신을 PR하기 위한 사이트로, 디자인부터 신중하게 작업했습니다.',
+      '초기에는 올해의 UI/UX 트렌드를 반영해 3D 에셋을 메인 요소로 사용하려 했으나, 3D 에셋과 어울리는 레이아웃을 구성하는 것이 쉽지 않아 컨셉을 변경했습니다. 작업하는 과정에서 즐거움을 느낄 수 있도록 귀엽고 따뜻한 컨셉을 메인으로 잡았으며, 메인 컬러로는 제가 좋아하는 보라색 계열을 선택했습니다. 메인 페이지에는 텍스트와 에셋에 애니메이션을 추가하여 귀여움을 더욱 강조했습니다.',
+      '가독성을 고려한 레이아웃 구성과 내용 정리가 쉽지 않았지만, 모든 과정을 제 의도대로 진행할 수 있어 매우 즐거운 프로젝트였습니다.',
+    ],
+    achievements: [
+      '이 사이트를 성공적으로 배포하여 여러분에게 저를 소개할 수 있었습니다.',
+    ],
+    thumbnails: ['/images/projects/portfolio.png'],
+    website: 'https://juhee-portfolio.vercel.app/',
+    github: 'https://github.com/maywngml/2024-portfolio',
+    figma:
+      'https://www.figma.com/design/uL3Vu4UTsDCRXTydn1EXxB/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4?node-id=247-3&t=rl3yLsTubONjvBUG-1',
+  },
 ];

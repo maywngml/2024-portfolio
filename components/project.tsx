@@ -1,8 +1,10 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Tektur } from 'next/font/google';
 import cn from 'clsx';
 import { GlobeAltIcon } from '@heroicons/react/24/outline';
 import { ProjectImageSlider } from '@/components';
+import { getFormattedDate } from '@/lib/utils/helpers';
 import type { Project } from '@/types/project';
 
 interface ProjectProps {
@@ -16,11 +18,15 @@ export default function Project({ project, index }: ProjectProps) {
   const {
     title,
     stacks,
+    duration,
+    teamSize,
     overview,
     details,
     achievements,
     thumbnails,
     website,
+    github,
+    figma,
   } = project;
 
   return (
@@ -45,8 +51,17 @@ export default function Project({ project, index }: ProjectProps) {
               </p>
             ))}
           </div>
+          <p className='font-bold lg:text-xl'>Duration</p>
+          <p className='mb-7 leading-normal lg:mb-8 lg:text-xl lg:leading-normal'>
+            {getFormattedDate(duration.start)} ~{' '}
+            {getFormattedDate(duration.end)}
+          </p>
+          <p className='font-bold lg:text-xl'>Team Size</p>
+          <p className='mb-7 leading-normal lg:mb-8 lg:text-xl lg:leading-normal'>
+            {teamSize}
+          </p>
           <p className='font-bold lg:text-xl'>OverView</p>
-          <p className='mb-7 leading-normal lg:mb-20 lg:text-xl lg:leading-normal'>
+          <p className='mb-7 leading-normal lg:mb-8 lg:text-xl lg:leading-normal'>
             {overview}
           </p>
           <p className='font-bold lg:text-xl'>Details</p>
@@ -64,18 +79,58 @@ export default function Project({ project, index }: ProjectProps) {
             title={title}
             images={thumbnails}
           />
-          {website && (
-            <Link
-              className='flex gap-1 items-center'
-              href={website}
-              target='_blank'
-            >
-              <GlobeAltIcon className='w-[18px] h-[18px] lg:w-5 lg:h-5' />
-              <span className='uppercase text-sm font-medium lg:text-base'>
-                view website
-              </span>
-            </Link>
-          )}
+          <div className='flex flex-wrap gap-x-3 gap-y-2'>
+            {website && (
+              <Link
+                className='flex gap-1 items-center'
+                href={website}
+                target='_blank'
+              >
+                <GlobeAltIcon className='w-5 h-5' />
+                <span className='uppercase text-sm font-medium lg:text-base'>
+                  view website
+                </span>
+              </Link>
+            )}
+            {github && (
+              <Link
+                className='flex gap-1 items-center'
+                href={github}
+                target='_blank'
+              >
+                <div className='flex justify-center w-5 h-5'>
+                  <Image
+                    src='/images/skills/github.svg'
+                    width={18}
+                    height={18}
+                    alt='깃허브 아이콘'
+                  />
+                </div>
+                <span className='uppercase text-sm font-medium lg:text-base'>
+                  view github
+                </span>
+              </Link>
+            )}
+            {figma && (
+              <Link
+                className='flex gap-1 items-center'
+                href={figma}
+                target='_blank'
+              >
+                <div className='flex justify-center w-5 h-5'>
+                  <Image
+                    src='/images/skills/figma.png'
+                    width={12}
+                    height={18}
+                    alt='피그마 아이콘'
+                  />
+                </div>
+                <span className='uppercase text-sm font-medium lg:text-base'>
+                  view figma
+                </span>
+              </Link>
+            )}
+          </div>
           <p className='mt-4 font-bold lg:mt-6 lg:text-xl'>
             Key Achievements & Results
           </p>
