@@ -16,7 +16,7 @@ export default function ProjectImageSlider({
 }: ProjectImageSliderProps) {
   return (
     <Swiper
-      className='mb-2 w-[calc(100vw-3.5rem)] h-[250px] md:h-[400px] lg:mb-3 lg:w-full lg:aspect-square xl:h-[500px]'
+      className='mb-5 w-[calc(100vw-3.5rem)] h-[250px] md:h-[400px] lg:mb-[30px] lg:w-full lg:aspect-square xl:h-[500px]'
       modules={[Pagination]}
       pagination={{ clickable: true }}
     >
@@ -24,7 +24,7 @@ export default function ProjectImageSlider({
         <SwiperSlide key={`${title} 썸네일 슬라이드 ${index}`}>
           <div className='relative w-full h-full'>
             <Image
-              className='object-cover rounded-[20px]'
+              className='object-cover'
               src={image}
               fill
               sizes='100%'
