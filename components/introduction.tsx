@@ -1,7 +1,6 @@
 import { Fragment } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import cn from 'clsx';
 import { ArrowDownTrayIcon } from '@heroicons/react/24/outline';
 import {
   introduction,
@@ -57,7 +56,7 @@ export default function Introduction() {
         <div className='lg:flex'>
           <div className='lg:border-r lg:border-black lg:basis-1/2 xl:basis-3/5'>
             <article className='px-4 py-5 border-b border-black lg:px-6 lg:py-7'>
-              <p className='mb-5 uppercase font-black text-lg leading-4 lg:text-xl lg:leading-5'>
+              <p className='mb-5 uppercase font-black text-lg leading-4 lg:text-2xl lg:leading-6'>
                 juhee
               </p>
               <p className='leading-normal lg:text-xl'>{introduction}</p>
@@ -76,19 +75,19 @@ export default function Introduction() {
               <div className='flex xl:basis-2/3'>
                 <div className='border-r border-black basis-1/2'>
                   <article className='px-4 py-5 border-b border-black lg:px-6 lg:py-7'>
-                    <p className='mb-5 uppercase font-black text-lg leading-4 lg:text-xl lg:leading-5'>
+                    <p className='mb-5 uppercase font-black text-lg leading-4 lg:text-2xl lg:leading-6'>
                       experience
                     </p>
                     {experience.map(
                       ({ period, name, job }: Experience, index) => (
                         <Fragment key={`experience-${index}`}>
-                          <span className='mt-1 mr-1 lg:mr-[6px] leading-normal lg:text-lg lg:leading-normal'>
+                          <span className='mt-1 mr-1 leading-normal lg:text-xl lg:leading-normal'>
                             {name}
                           </span>
-                          <span className='leading-normal lg:text-lg lg:leading-normal'>
+                          <span className='leading-normal lg:text-xl lg:leading-normal'>
                             {job}
                           </span>
-                          <p className='mb-2 text-sm leading-normal lg:text-sm lg:leading-normal'>
+                          <p className='mb-2 text-sm leading-normal lg:text-base lg:leading-normal'>
                             {period}
                           </p>
                         </Fragment>
@@ -96,7 +95,7 @@ export default function Introduction() {
                     )}
                   </article>
                   <article className='px-4 py-5 lg:px-6 lg:py-7'>
-                    <p className='mb-5 uppercase font-black text-lg leading-4 lg:text-xl lg:leading-5'>
+                    <p className='mb-5 uppercase font-black text-lg leading-4 lg:text-2xl lg:leading-6'>
                       mbti
                     </p>
                     <p className='uppercase lg:text-xl lg:leading-normal'>
@@ -106,7 +105,7 @@ export default function Introduction() {
                 </div>
                 <div className='basis-1/2 xl:border-r xl:border-black'>
                   <article className='px-4 py-5 border-b border-black lg:px-6 lg:py-7'>
-                    <p className='mb-5 uppercase font-black text-lg leading-4 lg:text-xl lg:leading-5'>
+                    <p className='mb-5 uppercase font-black text-lg leading-4 lg:text-2xl lg:leading-6'>
                       education
                     </p>
                     <span className='block leading-4 lg:inline lg:mr-2 lg:text-xl lg:leading-normal'>
@@ -120,7 +119,7 @@ export default function Introduction() {
                     </p>
                   </article>
                   <article className='px-4 py-5 lg:px-6 lg:py-7'>
-                    <p className='mb-5 uppercase font-black text-lg leading-4 lg:text-xl lg:leading-5'>
+                    <p className='mb-5 uppercase font-black text-lg leading-4 lg:text-2xl lg:leading-6'>
                       study
                     </p>
                     <Link
@@ -145,7 +144,7 @@ export default function Introduction() {
                 </div>
               </div>
               <article className='px-4 py-5 border-t border-b border-black lg:px-6 lg:py-7 lg:border-b-0 xl:basis-1/3 xl:border-t-0'>
-                <p className='mb-5 uppercase font-black text-lg leading-4 lg:text-xl lg:leading-5'>
+                <p className='mb-5 uppercase font-black text-lg leading-4 lg:text-2xl lg:leading-6'>
                   contact
                 </p>
                 {contacts.map(({ title, content, url }: Contact, index) => (
@@ -167,7 +166,7 @@ export default function Introduction() {
             </div>
           </div>
           <div className='px-4 py-5 lg:basis-1/2 lg:px-6 lg:py-7 xl:basis-2/5'>
-            <p className='mb-5 uppercase font-black text-lg leading-4 lg:text-xl lg:leading-5'>
+            <p className='mb-5 uppercase font-black text-lg leading-4 lg:text-2xl lg:leading-6'>
               skills
             </p>
             {skills.map(({ type, items }: Skill, outerIndex: number) => (
@@ -178,7 +177,7 @@ export default function Introduction() {
                 <p className='mb-2 font-medium lg:text-xl'>{type}</p>
                 {items.map(({ icon, title }: SkillItem, innerIndex: number) => (
                   <div
-                    className='inline-flex items-center gap-1 mr-[6px] lg:mr-4 lg:gap-2'
+                    className='inline-flex items-center gap-1 mr-3 lg:mr-4 lg:gap-2'
                     key={`item-${outerIndex}-${innerIndex}`}
                   >
                     <Image
