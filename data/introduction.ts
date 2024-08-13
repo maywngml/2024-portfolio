@@ -13,12 +13,12 @@ export const experience: Experience[] = [
   {
     period: '2022.06 ~ 2024.06',
     name: '예이랩스',
-    job: '프론트엔드 개발',
+    job: 'Front-End',
   },
   {
     period: '2021.06 ~ 2022.06',
     name: '골프존',
-    job: '프론트엔드 개발',
+    job: 'Front-End',
   },
 ];
 
