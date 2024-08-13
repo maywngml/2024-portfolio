@@ -1,9 +1,6 @@
 import type { Metadata } from 'next';
-import { REM } from 'next/font/google';
 import Provider from './provider';
 import './globals.css';
-
-const rem = REM({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: `Juhee's Portfolio`,
@@ -31,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={rem.className}>
+      <body>
         <Provider>{children}</Provider>
       </body>
     </html>

@@ -3,9 +3,13 @@ import { useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import gsap from 'gsap';
+import { REM } from 'next/font/google';
+import cn from 'clsx';
 import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(useGSAP);
+
+const rem = REM({ subsets: ['latin'] });
 
 export default function Intro() {
   const container = useRef(null);
@@ -264,7 +268,12 @@ export default function Intro() {
           alt='눈동자 이미지'
         />
       </div>
-      <div className='parts absolute opacity-0 px-3 py-2 min-w-[180px] left-1/2 top-[calc(50%+125px)] bg-orange-200 shadow-[-5px_5px_0px_2px_#FFADAD] rounded-[100px] -translate-x-1/2 -translate-y-1/2 font-black text-orange-800 text-xs uppercase lg:px-4 lg:py-3 lg:left-[calc(50%-150px)] lg:top-[calc(50%+270px)] lg:text-sm'>
+      <div
+        className={cn(
+          rem.className,
+          'parts absolute opacity-0 px-3 py-2 min-w-[180px] left-1/2 top-[calc(50%+125px)] bg-orange-200 shadow-[-5px_5px_0px_2px_#FFADAD] rounded-[100px] -translate-x-1/2 -translate-y-1/2 font-black text-orange-800 text-xs uppercase lg:px-4 lg:py-3 lg:left-[calc(50%-150px)] lg:top-[calc(50%+270px)] lg:text-sm'
+        )}
+      >
         front-end developer
       </div>
       <Link href='#introduction'>
@@ -289,31 +298,76 @@ export default function Intro() {
         </svg>
       </Link>
       <div className='relative font-black text-[80px] lg:text-[250px]'>
-        <h1 className='title-p absolute left-[calc(50%-105px)] top-[calc(50%-50px)] -translate-x-1/2 -translate-y-1/2 -rotate-[17.38deg] text-purple-300 lg:left-[calc(50%-320px)] lg:top-[calc(50%-150px)]'>
+        <h1
+          className={cn(
+            rem.className,
+            'title-p absolute left-[calc(50%-105px)] top-[calc(50%-50px)] -translate-x-1/2 -translate-y-1/2 -rotate-[17.38deg] text-purple-300 lg:left-[calc(50%-320px)] lg:top-[calc(50%-150px)]'
+          )}
+        >
           p
         </h1>
-        <h1 className='title-first-o absolute left-[calc(50%-35px)] top-[calc(50%-50px)] -translate-x-1/2 -translate-y-1/2 -rotate-[5.17deg] text-beige-400 lg:left-[calc(50%-100px)] lg:top-[calc(50%-170px)]'>
+        <h1
+          className={cn(
+            rem.className,
+            'title-first-o absolute left-[calc(50%-35px)] top-[calc(50%-50px)] -translate-x-1/2 -translate-y-1/2 -rotate-[5.17deg] text-beige-400 lg:left-[calc(50%-100px)] lg:top-[calc(50%-170px)]'
+          )}
+        >
           o
         </h1>
-        <h1 className='title-r absolute left-[calc(50%+45px)] top-[calc(50%-50px)] -translate-x-1/2 -translate-y-1/2 rotate-[9.35deg] text-purple-700 lg:left-[calc(50%+150px)] lg:top-[calc(50%-170px)]'>
+        <h1
+          className={cn(
+            rem.className,
+            'title-r absolute left-[calc(50%+45px)] top-[calc(50%-50px)] -translate-x-1/2 -translate-y-1/2 rotate-[9.35deg] text-purple-700 lg:left-[calc(50%+150px)] lg:top-[calc(50%-170px)]'
+          )}
+        >
           r
         </h1>
-        <h1 className='title-t absolute left-[calc(50%+115px)] top-[calc(50%-50px)] -translate-x-1/2 -translate-y-1/2 -rotate-[1.46deg] text-purple-500 lg:left-[calc(50%+370px)] lg:top-[calc(50%-170px)]'>
+        <h1
+          className={cn(
+            rem.className,
+            'title-t absolute left-[calc(50%+115px)] top-[calc(50%-50px)] -translate-x-1/2 -translate-y-1/2 -rotate-[1.46deg] text-purple-500 lg:left-[calc(50%+370px)] lg:top-[calc(50%-170px)]'
+          )}
+        >
           t
         </h1>
-        <h1 className='title-f absolute left-[calc(50%-125px)] top-[calc(50%+50px)] -translate-x-1/2 -translate-y-1/2 -rotate-[17.38deg] text-purple-700 lg:left-[calc(50%-400px)] lg:top-[calc(50%+130px)]'>
+        <h1
+          className={cn(
+            rem.className,
+            'title-f absolute left-[calc(50%-125px)] top-[calc(50%+50px)] -translate-x-1/2 -translate-y-1/2 -rotate-[17.38deg] text-purple-700 lg:left-[calc(50%-400px)] lg:top-[calc(50%+130px)]'
+          )}
+        >
           f
         </h1>
-        <h1 className='title-second-o absolute left-[calc(50%-55px)] top-[calc(50%+50px)] -translate-x-1/2 -translate-y-1/2 -rotate-[5.17deg] text-purple-300 lg:left-[calc(50%-170px)] lg:top-[calc(50%+130px)]'>
+        <h1
+          className={cn(
+            rem.className,
+            'title-second-o absolute left-[calc(50%-55px)] top-[calc(50%+50px)] -translate-x-1/2 -translate-y-1/2 -rotate-[5.17deg] text-purple-300 lg:left-[calc(50%-170px)] lg:top-[calc(50%+130px)]'
+          )}
+        >
           o
         </h1>
-        <h1 className='title-l absolute left-[calc(50%+15px)] top-[calc(50%+50px)] -translate-x-1/2 -translate-y-1/2 -rotate-[0.07deg] text-beige-400 lg:left-[calc(50%+50px)] lg:top-[calc(50%+130px)]'>
+        <h1
+          className={cn(
+            rem.className,
+            'title-l absolute left-[calc(50%+15px)] top-[calc(50%+50px)] -translate-x-1/2 -translate-y-1/2 -rotate-[0.07deg] text-beige-400 lg:left-[calc(50%+50px)] lg:top-[calc(50%+130px)]'
+          )}
+        >
           l
         </h1>
-        <h1 className='title-i absolute left-[calc(50%+65px)] top-[calc(50%+50px)] -translate-x-1/2 -translate-y-1/2 -rotate-[5.17deg] text-purple-300 lg:left-[calc(50%+230px)] lg:top-[calc(50%+130px)]'>
+        <h1
+          className={cn(
+            rem.className,
+            'title-i absolute left-[calc(50%+65px)] top-[calc(50%+50px)] -translate-x-1/2 -translate-y-1/2 -rotate-[5.17deg] text-purple-300 lg:left-[calc(50%+230px)] lg:top-[calc(50%+130px)]'
+          )}
+        >
           i
         </h1>
-        <h1 className='title-third-o absolute left-[calc(50%+135px)] top-[calc(50%+50px)] -translate-x-1/2 -translate-y-1/2 rotate-[11.23deg] text-purple-700 lg:left-[calc(50%+380px)] lg:top-[calc(50%+150px)]'>
+        <h1
+          className={cn(
+            rem.className,
+            'title-third-o absolute left-[calc(50%+135px)] top-[calc(50%+50px)] -translate-x-1/2 -translate-y-1/2 rotate-[11.23deg] text-purple-700 lg:left-[calc(50%+380px)] lg:top-[calc(50%+150px)]'
+          )}
+        >
           o
         </h1>
       </div>

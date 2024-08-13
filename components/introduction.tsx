@@ -1,7 +1,6 @@
 import { Fragment } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Tektur } from 'next/font/google';
 import cn from 'clsx';
 import { ArrowDownTrayIcon } from '@heroicons/react/24/outline';
 import {
@@ -19,8 +18,6 @@ import type {
   Skill,
   SkillItem,
 } from '@/types/introduction';
-
-const tektur = Tektur({ subsets: ['latin'] });
 
 export default function Introduction() {
   return (
@@ -55,21 +52,12 @@ export default function Introduction() {
               r='17%'
             />
           </svg>
-          <p
-            className={cn(tektur.className, 'uppercase font-black lg:text-xl')}
-          >
-            juhee
-          </p>
+          <p className='uppercase font-black lg:text-xl'>juhee</p>
         </div>
         <div className='lg:flex'>
           <div className='lg:border-r lg:border-black lg:basis-1/2 xl:basis-3/5'>
             <article className='px-4 py-5 border-b border-black lg:px-9 lg:py-7'>
-              <p
-                className={cn(
-                  tektur.className,
-                  'mb-1 uppercase font-black text-xl text-purple-700 leading-5 lg:text-2xl'
-                )}
-              >
+              <p className='mb-1 uppercase font-black text-xl text-purple-700 leading-5 lg:text-2xl'>
                 introduction
               </p>
               <p className='leading-normal lg:text-xl'>{introduction}</p>
@@ -88,12 +76,7 @@ export default function Introduction() {
               <div className='flex xl:basis-2/3'>
                 <div className='border-r border-black basis-1/2'>
                   <article className='px-4 py-5 border-b border-black lg:px-9 lg:py-7'>
-                    <p
-                      className={cn(
-                        tektur.className,
-                        'mb-1 uppercase font-black text-xl text-purple-700 leading-5 lg:text-2xl'
-                      )}
-                    >
+                    <p className='mb-1 uppercase font-black text-xl text-purple-700 leading-5 lg:text-2xl'>
                       experience
                     </p>
                     {experience.map(
@@ -113,12 +96,7 @@ export default function Introduction() {
                     )}
                   </article>
                   <article className='px-4 py-5 lg:px-9 lg:py-7'>
-                    <p
-                      className={cn(
-                        tektur.className,
-                        'mb-1 uppercase font-black text-xl text-purple-700 leading-5 lg:text-2xl'
-                      )}
-                    >
+                    <p className='mb-1 uppercase font-black text-xl text-purple-700 leading-5 lg:text-2xl'>
                       mbti
                     </p>
                     <p className='uppercase lg:text-xl lg:leading-normal'>
@@ -128,12 +106,7 @@ export default function Introduction() {
                 </div>
                 <div className='basis-1/2 xl:border-r xl:border-black'>
                   <article className='px-4 py-5 border-b border-black lg:px-9 lg:py-7'>
-                    <p
-                      className={cn(
-                        tektur.className,
-                        'mb-1 uppercase font-black text-xl text-purple-700 leading-5 lg:text-2xl'
-                      )}
-                    >
+                    <p className='mb-1 uppercase font-black text-xl text-purple-700 leading-5 lg:text-2xl'>
                       education
                     </p>
                     <p className='mb-1 text-sm leading-normal lg:mb-0 lg:text-base lg:leading-normal'>
@@ -147,12 +120,7 @@ export default function Introduction() {
                     </span>
                   </article>
                   <article className='px-4 py-5 lg:px-9 lg:py-7'>
-                    <p
-                      className={cn(
-                        tektur.className,
-                        'mb-1 uppercase font-black text-xl text-purple-700 leading-5 lg:text-2xl'
-                      )}
-                    >
+                    <p className='mb-1 uppercase font-black text-xl text-purple-700 leading-5 lg:text-2xl'>
                       study
                     </p>
                     <p className='text-sm lg:text-base lg:leading-normal'>
@@ -177,12 +145,7 @@ export default function Introduction() {
                 </div>
               </div>
               <article className='px-4 py-5 border-t border-b border-black lg:px-9 lg:py-7 lg:border-b-0 xl:basis-1/3 xl:border-t-0'>
-                <p
-                  className={cn(
-                    tektur.className,
-                    'mb-1 uppercase font-black text-xl text-purple-700 leading-5 lg:text-2xl'
-                  )}
-                >
+                <p className='mb-1 uppercase font-black text-xl text-purple-700 leading-5 lg:text-2xl'>
                   contact
                 </p>
                 {contacts.map(({ title, content, url }: Contact, index) => (
@@ -204,12 +167,7 @@ export default function Introduction() {
             </div>
           </div>
           <div className='px-4 py-5 lg:basis-1/2 lg:px-9 lg:py-7 xl:basis-2/5'>
-            <p
-              className={cn(
-                tektur.className,
-                'mb-1 uppercase font-black text-xl text-purple-700 leading-5 lg:text-2xl'
-              )}
-            >
+            <p className='mb-1 uppercase font-black text-xl text-purple-700 leading-5 lg:text-2xl'>
               skills
             </p>
             {skills.map(({ type, items }: Skill, outerIndex: number) => (
@@ -217,7 +175,7 @@ export default function Introduction() {
                 className='mt-1'
                 key={`skill-${outerIndex}`}
               >
-                <p className='mb-2 lg:text-xl'>{type}</p>
+                <p className='mb-2 font-medium lg:text-xl'>{type}</p>
                 {items.map(({ icon, title }: SkillItem, innerIndex: number) => (
                   <div
                     className='inline-flex items-center gap-1 mr-[6px] lg:mr-4 lg:gap-2'
