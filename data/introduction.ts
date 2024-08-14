@@ -87,8 +87,8 @@ export const skills: Skill[] = [
         title: 'React',
       },
       {
-        icon: '/images/skills/nextjs.png',
-        title: 'NextJS',
+        icon: '/images/skills/NextJS.png',
+        title: 'Next.js',
       },
       {
         icon: '/images/skills/redux.svg',

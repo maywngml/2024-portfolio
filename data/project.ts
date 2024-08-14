@@ -4,7 +4,7 @@ export const projects: Project[] = [
   {
     title: 'nnn dao',
     stacks: [
-      'NextJS',
+      'Next.js',
       'React',
       'HTML',
       'CSS',
@@ -41,7 +41,7 @@ export const projects: Project[] = [
   {
     title: 'sage',
     stacks: [
-      'NextJS',
+      'Next.js',
       'React',
       'HTML',
       'CSS',
@@ -93,7 +93,7 @@ export const projects: Project[] = [
   {
     title: 'ape universe',
     stacks: [
-      'NextJS',
+      'Next.js',
       'React',
       'HTML',
       'CSS',
@@ -123,7 +123,7 @@ export const projects: Project[] = [
   {
     title: 'yaylabs',
     stacks: [
-      'NextJS',
+      'Next.js',
       'React',
       'HTML',
       'CSS',
@@ -152,7 +152,7 @@ export const projects: Project[] = [
   {
     title: 'artivist',
     stacks: [
-      'NextJS',
+      'Next.js',
       'React',
       'HTML',
       'CSS',
@@ -184,7 +184,7 @@ export const projects: Project[] = [
   // {
   //   title: 'starboys',
   //   stacks: [
-  //     'NextJS',
+  //     'Next.js',
   //     'React',
   //     'HTML',
   //     'CSS',
@@ -211,7 +211,7 @@ export const projects: Project[] = [
   {
     title: 'portfolio',
     stacks: [
-      'NextJS',
+      'Next.js',
       'React',
       'HTML',
       'CSS',
