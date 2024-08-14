@@ -164,7 +164,7 @@ export const projects: Project[] = [
     ],
     duration: {
       start: new Date('2023-04'),
-      end: new Date('2023-05'),
+      end: new Date('2023-06'),
     },
     teamSize: '프론트엔드 1명',
     overview:
