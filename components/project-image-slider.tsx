@@ -2,7 +2,6 @@
 import NextImage from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
-import { getBlurDataURL } from '@/lib/utils/helpers';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import type { Image } from '@/types/project';
@@ -22,7 +21,7 @@ export default function ProjectImageSlider({
       modules={[Pagination]}
       pagination={{ clickable: true }}
     >
-      {images.map(({ url, blurhash }: Image, index) => (
+      {images.map(({ url, blurDataURL }: Image, index) => (
         <SwiperSlide key={`${title} 썸네일 슬라이드 ${index}`}>
           <div className='relative w-full h-full'>
             <NextImage
@@ -30,7 +29,7 @@ export default function ProjectImageSlider({
               src={url}
               fill
               placeholder='blur'
-              blurDataURL={getBlurDataURL(blurhash)}
+              blurDataURL={blurDataURL}
               sizes='100%'
               alt={`${title} 썸네일 이미지`}
             ></NextImage>
