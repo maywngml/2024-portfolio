@@ -30,12 +30,27 @@ export const projects: Project[] = [
       // TODO: 수정
       '프로젝트를 성공적으로 런칭하여 예비 사용자들에게 NNN DAO에 대한 정보를 효과적으로 알릴 수 있었습니다.',
     ],
-    thumbnails: [
-      '/images/projects/nnn.png',
-      '/images/projects/nnn-detail-1.png',
-      '/images/projects/nnn-detail-2.png',
-      '/images/projects/nnn-detail-3.png',
-      '/images/projects/nnn-detail-4.png',
+    images: [
+      {
+        url: '/images/projects/nnn.png',
+        blurhash: 'L58zurw_06x?00W?xuWE0rWB~2jF',
+      },
+      {
+        url: '/images/projects/nnn-detail-1.png',
+        blurhash: 'L1688A-:00EL4moa_4t89jxt~NRQ',
+      },
+      {
+        url: '/images/projects/nnn-detail-2.png',
+        blurhash: 'L05X.C_2009FI7s+?w%L0Lt5~o-n',
+      },
+      {
+        url: '/images/projects/nnn-detail-3.png',
+        blurhash: 'L25q|ut600a$jCj[o$oc00j[_4jr',
+      },
+      {
+        url: '/images/projects/nnn-detail-4.png',
+        blurhash: 'L05Ey+~o00019ExV_3oeWFt7-.%F',
+      },
     ],
   },
   {
@@ -67,13 +82,31 @@ export const projects: Project[] = [
       // TODO: 좀 더 구체적으로 수정
       '스마트 컨트랙트와의 상호작용을 통해 민팅 트랜잭션 로직을 구현하여 블록체인 기술에 대한 이해를 높일 수 있었습니다.',
     ],
-    thumbnails: [
-      '/images/projects/sage-detail-1.png',
-      '/images/projects/sage-detail-2.png',
-      '/images/projects/sage-detail-3.png',
-      '/images/projects/sage-detail-4.png',
-      '/images/projects/sage-detail-5.png',
-      '/images/projects/sage-detail-6.png',
+    images: [
+      {
+        url: '/images/projects/sage-detail-1.png',
+        blurhash: 'L12Ynsn%0JSh#kjsOZWq4,W;^ms9',
+      },
+      {
+        url: '/images/projects/sage-detail-2.png',
+        blurhash: 'L24xoS9F00~o?wRPIT$_ENe--png',
+      },
+      {
+        url: '/images/projects/sage-detail-3.png',
+        blurhash: 'L15~66-O00Dh~qRi00Sj4TtTHX9%',
+      },
+      {
+        url: '/images/projects/sage-detail-4.png',
+        blurhash: 'L24xoN%L009G%hxtI9D*_4j=8^NK',
+      },
+      {
+        url: '/images/projects/sage-detail-5.png',
+        blurhash: 'L44C3Yn28^Y7oMnhflW=8wkr?dZg',
+      },
+      {
+        url: '/images/projects/sage-detail-6.png',
+        blurhash: 'L14V5krB00PW$engSjSj4TX.?viG',
+      },
     ],
   },
   // {
@@ -87,7 +120,7 @@ export const projects: Project[] = [
   //   achievements: [
   //     '웹사이트를 성공적으로 개발 및 런칭하여 홍콩에서 개최된 BAYC 행사에서 웹사이트를 선보이며 글로벌 커뮤니티와 소통할 수 있는 기회를 가졌습니다.',
   //   ],
-  //   thumbnails: ['/images/projects/apetche.png'],
+  //   images: ['/images/projects/apetche.png'],
   //   website: 'https://apetche.com',
   // },
   {
@@ -117,7 +150,12 @@ export const projects: Project[] = [
     achievements: [
       '프로젝트를 성공적으로 런칭하여 23년 11월 홍콩에서 개최된 BAYC 행사에서 글로벌 커뮤니티와 소통할 수 있는 기회를 가졌습니다.',
     ],
-    thumbnails: ['/images/projects/ape-universe.png'],
+    images: [
+      {
+        url: '/images/projects/ape-universe.png',
+        blurhash: 'LFCs5cjb00RjQma_yDf900WV?wxt',
+      },
+    ],
     website: 'https://apeuniversebystarboys.xyz',
   },
   {
@@ -146,7 +184,12 @@ export const projects: Project[] = [
     achievements: [
       '회사 소개, 채용 공고 등 자사에 대한 다양한 정보를 한 곳에서 명확하게 제공함으로써 클라이언트와 지원자의 이해를 돕고 효율적인 커뮤니케이션 채널을 마련했습니다.',
     ],
-    thumbnails: ['/images/projects/yaylabs.png'],
+    images: [
+      {
+        url: '/images/projects/yaylabs.png',
+        blurhash: 'LKAwG1x=^--iRW4$IWEAMu-oxTn%',
+      },
+    ],
     website: 'https://yaylabs.io',
   },
   {
@@ -178,7 +221,12 @@ export const projects: Project[] = [
     achievements: [
       '프로젝트의 성공적인 런칭으로, 더스틴 옐린(Dustin Yellin)과 아고스티노(Agostino) 작가와의 레지던시 계약을 성공적으로 체결하여 전시를 성황리에 진행할 수 있었습니다.',
     ],
-    thumbnails: ['/images/projects/artivist.png'],
+    images: [
+      {
+        url: '/images/projects/artivist.png',
+        blurhash: 'LJJ7,px[_NrY8x9a5R#.VEOEM|Vt',
+      },
+    ],
     website: 'https://artivistglobal.com',
   },
   // {
@@ -205,7 +253,7 @@ export const projects: Project[] = [
   //     '데이터 패칭을 위한 리액트 훅 라이브러리 SWR을 사용하여 전역 상태 관리를 간소화하여 컴포넌트 간 데이터 공유를 보다 효율적으로 처리했습니다.',
   //   ],
   //   achievements: ['수정'],
-  //   thumbnails: ['/images/projects/starboys-nft.png'],
+  //   images: ['/images/projects/starboys-nft.png'],
   //   website: 'https://starboysnft.io',
   // },
   {
@@ -234,7 +282,12 @@ export const projects: Project[] = [
     achievements: [
       '이 사이트를 성공적으로 배포하여 여러분에게 저를 소개할 수 있었습니다.',
     ],
-    thumbnails: ['/images/projects/portfolio.png'],
+    images: [
+      {
+        url: '/images/projects/portfolio.png',
+        blurhash: 'LFSr+Nt4o~WZxtkCodRQ_FWFV@s+',
+      },
+    ],
     website: 'https://juhee-portfolio.vercel.app/',
     github: 'https://github.com/maywngml/2024-portfolio',
     figma:

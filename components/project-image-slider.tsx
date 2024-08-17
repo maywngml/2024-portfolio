@@ -1,13 +1,15 @@
 'use client';
-import Image from 'next/image';
+import NextImage from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
+import { getBlurDataURL } from '@/lib/utils/helpers';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import type { Image } from '@/types/project';
 
 interface ProjectImageSliderProps {
   title: string;
-  images: string[];
+  images: Image[];
 }
 
 export default function ProjectImageSlider({
@@ -20,16 +22,18 @@ export default function ProjectImageSlider({
       modules={[Pagination]}
       pagination={{ clickable: true }}
     >
-      {images.map((image, index) => (
+      {images.map(({ url, blurhash }: Image, index) => (
         <SwiperSlide key={`${title} 썸네일 슬라이드 ${index}`}>
           <div className='relative w-full h-full'>
-            <Image
+            <NextImage
               className='object-cover'
-              src={image}
+              src={url}
               fill
+              placeholder='blur'
+              blurDataURL={getBlurDataURL(blurhash)}
               sizes='100%'
               alt={`${title} 썸네일 이미지`}
-            ></Image>
+            ></NextImage>
           </div>
         </SwiperSlide>
       ))}

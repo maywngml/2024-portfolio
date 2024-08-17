@@ -23,7 +23,7 @@ export default function Project({ project, index }: ProjectProps) {
     overview,
     details,
     achievements,
-    thumbnails,
+    images,
     website,
     github,
     figma,
@@ -43,7 +43,7 @@ export default function Project({ project, index }: ProjectProps) {
           </p>
           <ProjectImageSlider
             title={title}
-            images={thumbnails}
+            images={images}
           />
           <div className='flex flex-wrap gap-x-3 gap-y-2'>
             {website && (
