@@ -60,7 +60,6 @@ export default function Introduction() {
                 juhee
               </p>
               <p className='leading-normal lg:text-xl'>{introduction}</p>
-              {/* TODO: 이력서 파일 추가 */}
               <Link
                 className='flex justify-between items-center w-[136px] px-5 mt-5 py-1 bg-purple-100 lg:w-[156px] lg:mt-20 lg:px-5 lg:py-3'
                 href='/pdf/서주희_이력서.pdf'
