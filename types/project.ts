@@ -3,11 +3,6 @@ export type Duration = {
   end: Date;
 };
 
-export type Image = {
-  url: string;
-  blurDataURL: string;
-};
-
 export type Project = {
   title: string;
   stacks: string[];
@@ -16,7 +11,7 @@ export type Project = {
   overview: string;
   details: string[];
   achievements: string[];
-  images: Image[];
+  images: string[];
   website?: string;
   github?: string;
   figma?: string;
