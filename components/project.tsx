@@ -52,8 +52,8 @@ export default function Project({ project, index }: ProjectProps) {
                 href={website}
                 target='_blank'
               >
-                <GlobeAltIcon className='w-5 h-5 stroke-purple-800' />
-                <span className='uppercase text-sm font-medium text-purple-800 lg:text-base'>
+                <GlobeAltIcon className='w-6 h-6 stroke-purple-800' />
+                <span className='uppercase text-lg font-bold text-purple-800 lg:text-xl'>
                   view website
                 </span>
               </Link>
@@ -64,15 +64,15 @@ export default function Project({ project, index }: ProjectProps) {
                 href={github}
                 target='_blank'
               >
-                <div className='flex justify-center w-5 h-5'>
+                <div className='flex justify-center w-6 h-5'>
                   <Image
                     src='/images/skills/github-purple.png'
-                    width={18}
-                    height={18}
+                    width={20}
+                    height={20}
                     alt='깃허브 아이콘'
                   />
                 </div>
-                <span className='uppercase text-sm font-medium text-purple-800 lg:text-base'>
+                <span className='uppercase text-lg font-bold text-purple-800 lg:text-xl'>
                   view github
                 </span>
               </Link>
@@ -83,15 +83,15 @@ export default function Project({ project, index }: ProjectProps) {
                 href={figma}
                 target='_blank'
               >
-                <div className='flex justify-center w-5 h-5'>
+                <div className='flex justify-center w-6 h-5'>
                   <Image
                     src='/images/skills/figma-purple.png'
-                    width={12}
-                    height={18}
+                    width={16}
+                    height={20}
                     alt='피그마 아이콘'
                   />
                 </div>
-                <span className='uppercase text-sm font-medium text-purple-800 lg:text-base'>
+                <span className='uppercase text-lg font-bold text-purple-800 lg:text-xl'>
                   view figma
                 </span>
               </Link>
