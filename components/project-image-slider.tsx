@@ -21,21 +21,24 @@ export default function ProjectImageSlider({
       modules={[Pagination]}
       pagination={{ clickable: true }}
     >
-      {images.map(({ url, blurDataURL }: Image, index) => (
-        <SwiperSlide key={`${title} 썸네일 슬라이드 ${index}`}>
-          <div className='relative w-full h-full'>
-            <NextImage
-              className='object-cover'
-              src={url}
-              fill
-              placeholder='blur'
-              blurDataURL={blurDataURL}
-              sizes='100%'
-              alt={`${title} 썸네일 이미지`}
-            ></NextImage>
-          </div>
-        </SwiperSlide>
-      ))}
+      {images.map(({ url, blurDataURL }: Image, index) => {
+        const image = require(`../public${url}`).default;
+
+        return (
+          <SwiperSlide key={`${title} 썸네일 슬라이드 ${index}`}>
+            <div className='relative w-full h-full'>
+              <NextImage
+                className='object-cover'
+                src={image}
+                fill
+                placeholder='blur'
+                sizes='100%'
+                alt={`${title} 썸네일 이미지`}
+              ></NextImage>
+            </div>
+          </SwiperSlide>
+        );
+      })}
     </Swiper>
   );
 }
