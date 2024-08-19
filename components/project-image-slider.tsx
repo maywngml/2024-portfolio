@@ -4,10 +4,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import type { Image } from '@/types/project';
 
 interface ProjectImageSliderProps {
   title: string;
-  images: string[];
+  images: Image[];
 }
 
 export default function ProjectImageSlider({
@@ -20,24 +21,21 @@ export default function ProjectImageSlider({
       modules={[Pagination]}
       pagination={{ clickable: true }}
     >
-      {images.map((image, index) => {
-        const src = require(`../public${image}`).default;
-
-        return (
-          <SwiperSlide key={`${title} 썸네일 슬라이드 ${index}`}>
-            <div className='relative w-full h-full'>
-              <NextImage
-                className='object-cover'
-                src={src}
-                fill
-                placeholder='blur'
-                sizes='100%'
-                alt={`${title} 썸네일 이미지`}
-              ></NextImage>
-            </div>
-          </SwiperSlide>
-        );
-      })}
+      {images.map(({ url, blurDataURL }: Image, index) => (
+        <SwiperSlide key={`${title} 썸네일 슬라이드 ${index}`}>
+          <div className='relative w-full h-full'>
+            <NextImage
+              className='object-cover'
+              src={url}
+              fill
+              placeholder='blur'
+              blurDataURL={blurDataURL}
+              sizes='100%'
+              alt={`${title} 썸네일 이미지`}
+            ></NextImage>
+          </div>
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 }
