@@ -53,7 +53,7 @@ export default function Project({ project, index }: ProjectProps) {
                 target='_blank'
               >
                 <GlobeAltIcon className='w-6 h-6 stroke-purple-800' />
-                <span className='uppercase text-lg font-bold text-purple-800 lg:text-xl'>
+                <span className='uppercase text-base font-bold text-purple-800 lg:text-xl'>
                   view website
                 </span>
               </Link>
@@ -72,7 +72,7 @@ export default function Project({ project, index }: ProjectProps) {
                     alt='깃허브 아이콘'
                   />
                 </div>
-                <span className='uppercase text-lg font-bold text-purple-800 lg:text-xl'>
+                <span className='uppercase text-base font-bold text-purple-800 lg:text-xl'>
                   view github
                 </span>
               </Link>
@@ -91,7 +91,7 @@ export default function Project({ project, index }: ProjectProps) {
                     alt='피그마 아이콘'
                   />
                 </div>
-                <span className='uppercase text-lg font-bold text-purple-800 lg:text-xl'>
+                <span className='uppercase text-base font-bold text-purple-800 lg:text-xl'>
                   view figma
                 </span>
               </Link>
