@@ -5,7 +5,6 @@ export type Duration = {
 
 export type Image = {
   url: string;
-  blurDataURL: string;
 };
 
 export type Project = {
