@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Tektur } from 'next/font/google';
 import cn from 'clsx';
 import { GlobeAltIcon } from '@heroicons/react/24/outline';
-import { ProjectImageSlider } from '@/components';
+import { ImageWithPlaceholder } from '.';
 import { getFormattedDate } from '@/lib/utils/helpers';
 import type { Project } from '@/types/project';
 
@@ -23,7 +23,7 @@ export default function Project({ project, index }: ProjectProps) {
     overview,
     details,
     achievements,
-    images,
+    image,
     website,
     github,
     figma,
@@ -31,20 +31,36 @@ export default function Project({ project, index }: ProjectProps) {
 
   return (
     <section className='flex px-7 py-10 justify-center min-h-fullHeight lg:px-14 lg:py-16'>
-      <div className='flex flex-1 flex-col border-y border-black lg:flex-row xl:max-w-[1500px]'>
-        <article className='py-5 border-b border-black lg:py-7 lg:basis-1/2 lg:border-r lg:border-b-0'>
+      <div
+        className={`${
+          image && 'flex flex-1 flex-col lg:flex-row'
+        } border-y border-black xl:max-w-[1500px]`}
+      >
+        <article
+          className={`${
+            image && 'border-b border-black lg:border-r lg:border-b-0'
+          } py-5 lg:py-7 lg:basis-1/2`}
+        >
           <p
             className={cn(
               tektur.className,
-              'mb-8 uppercase font-black text-[34px] leading-[34px] lg:mb-10 lg:text-[50px] lg:leading-[50px] xl:text-[60px] xl:leading-[60px]'
+              image && 'mb-8 lg:mb-10',
+              'uppercase font-black text-[34px] leading-[34px] lg:text-[50px] lg:leading-[50px] xl:text-[60px] xl:leading-[60px]'
             )}
           >
             {index.toString().padStart(2, '0')}. {title}
           </p>
-          <ProjectImageSlider
-            title={title}
-            images={images}
-          />
+          {image && (
+            <div className='relative mb-2 w-full h-[250px] md:h-[400px] lg:mb-3 lg:aspect-square xl:h-[500px]'>
+              <ImageWithPlaceholder
+                className='object-cover'
+                src={image.url}
+                fill
+                sizes='100%'
+                alt={`${title} 썸네일 이미지`}
+              ></ImageWithPlaceholder>
+            </div>
+          )}
           <div className='flex flex-wrap gap-x-3 gap-y-2'>
             {website && (
               <Link
@@ -98,7 +114,9 @@ export default function Project({ project, index }: ProjectProps) {
             )}
           </div>
         </article>
-        <article className='py-5 lg:px-10 lg:py-7 lg:basis-1/2'>
+        <article
+          className={`${image && 'lg:px-10'} py-5  lg:py-7 lg:basis-1/2`}
+        >
           <div className='flex flex-wrap mb-8 gap-3 lg:mb-10 lg:mr-2'>
             {stacks.map((stack, index) => (
               <p

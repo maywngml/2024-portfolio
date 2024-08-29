@@ -16,7 +16,7 @@ export type Project = {
   overview: string;
   details: string[];
   achievements: string[];
-  images: Image[];
+  image?: Image;
   website?: string;
   github?: string;
   figma?: string;
