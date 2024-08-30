@@ -36,6 +36,32 @@ export const projects: Project[] = [
     website: 'https://dao.nnn.so',
   },
   {
+    title: 'apetche',
+    stacks: [
+      'CSS',
+      'PHP',
+      'Javascript',
+      'Wordpress',
+      'Woocommerce',
+      '코드엠샵 플러그인',
+    ],
+    duration: {
+      start: new Date('2024-01'),
+      end: new Date('2024-03'),
+    },
+    teamSize: '프론트엔드 1명',
+    overview: `반려동물 용품 전문 기업 '아페체'의 자사몰 웹사이트를 신규 개발하였습니다.`,
+    details: [
+      '워드프레스와 우커머스를 사용하여 쇼핑몰 플랫폼을 구축하였습니다. 코드엠샵 플러그인과 우커머스를 활용해 고객 관리 및 결제 연동 등 기본 쇼핑몰 기능을 구현했습니다.',
+      '기획서에 따라 테마를 커스터마이징하여 사용자 경험(UX)을 개선하였으며, 쇼핑몰 운영자를 위한 상품, 고객, 주문 관리 방법 등을 포함한 운영 가이드를 작성하여 운영 효율을 높였습니다.',
+    ],
+    achievements: [
+      '테마 커스터마이징과 운영 가이드 작성을 통해 사용자 경험과 쇼핑몰 운영 효율성을 개선했습니다.',
+    ],
+    image: { url: '/images/projects/apetche.png' },
+    website: 'https://apetche.com',
+  },
+  {
     title: '가상자산 투자 커뮤니티 웹',
     stacks: [
       'Next.js',
@@ -65,20 +91,6 @@ export const projects: Project[] = [
       '스마트 컨트랙트와의 상호작용을 통해 민팅 트랜잭션 로직을 구현하여 블록체인 기술에 대한 이해를 높일 수 있었습니다.',
     ],
   },
-  // {
-  //   title: 'apetche',
-  //   stacks: ['Wordpress', 'Woocommerce', '코드엠샵 플러그인'],
-  //   overview: `반려동물 용품 전문 기업 '아페체'의 자사몰 웹사이트를 신규 개발하였습니다.`,
-  //   details: '
-  //     '워드프레스와 우커머스, 코드엠샵 이커머스 플러그인을 활용하여 쇼핑몰의 핵심 기능인 상품 카테고리/상세 페이지, 장바구니/결제 프로세스, 고객 리뷰 시스템 등의 기반을 마련했습니다.',
-  //     '플러그인의 다양한 설정과 커스터마이징을 통해 온라인 스토어의 기본 골격을 구축하고 관리자/사용자 인터페이스를 조율했습니다.',
-  //   ],
-  //   achievements: [
-  //     '웹사이트를 성공적으로 개발 및 런칭하여 홍콩에서 개최된 BAYC 행사에서 웹사이트를 선보이며 글로벌 커뮤니티와 소통할 수 있는 기회를 가졌습니다.',
-  //   ],
-  //   image: ['/images/projects/apetche.png'],
-  //   website: 'https://apetche.com',
-  // },
   {
     title: 'ape universe',
     stacks: [
@@ -110,37 +122,6 @@ export const projects: Project[] = [
       url: '/images/projects/ape-universe.png',
     },
     website: 'https://apeuniversebystarboys.xyz',
-  },
-  {
-    title: 'yaylabs',
-    stacks: [
-      'Next.js',
-      'React',
-      'HTML',
-      'CSS',
-      'Typescript',
-      'TailwindCSS',
-      'Redux Toolkit',
-      'GSAP',
-    ],
-    duration: {
-      start: new Date('2023-12'),
-      end: new Date('2024-01'),
-    },
-    teamSize: '프론트엔드 1명',
-    overview:
-      '예이랩스에 대한 소개와 팀원 정보, 채용 공고 등을 소개하는 예이랩스 자사 공식 웹사이트를 개발했습니다.',
-    details: [
-      '자사 공식 사이트인 만큼 자유도가 높아, 디자이너와 애니메이션에 대한 아이디어를 적극적으로 주고받으며 좋은 결과물을 만들어낼 수 있었습니다.',
-      'GSAP을 활용하여 스크롤 위치에 따라 요소가 회전하며 움직이는 스크롤 애니메이션과 콘텐츠가 컨베이어 벨트처럼 한쪽으로 흘러가는 무한 스크롤 애니메이션을 개발했습니다. 이 외에도 역동적이고 다채로운 사이트를 만들기 위해 다양한 애니메이션을 적용했습니다.',
-    ],
-    achievements: [
-      '회사 소개, 채용 공고 등 자사에 대한 다양한 정보를 한 곳에서 명확하게 제공함으로써 클라이언트와 지원자의 이해를 돕고 효율적인 커뮤니케이션 채널을 마련했습니다.',
-    ],
-    image: {
-      url: '/images/projects/yaylabs.png',
-    },
-    website: 'https://yaylabs.io',
   },
   {
     title: 'artivist',
@@ -175,6 +156,37 @@ export const projects: Project[] = [
       url: '/images/projects/artivist.png',
     },
     website: 'https://artivistglobal.com',
+  },
+  {
+    title: 'yaylabs',
+    stacks: [
+      'Next.js',
+      'React',
+      'HTML',
+      'CSS',
+      'Typescript',
+      'TailwindCSS',
+      'Redux Toolkit',
+      'GSAP',
+    ],
+    duration: {
+      start: new Date('2023-12'),
+      end: new Date('2024-01'),
+    },
+    teamSize: '프론트엔드 1명',
+    overview:
+      '예이랩스에 대한 소개와 팀원 정보, 채용 공고 등을 소개하는 예이랩스 자사 공식 웹사이트를 개발했습니다.',
+    details: [
+      '자사 공식 사이트인 만큼 자유도가 높아, 디자이너와 애니메이션에 대한 아이디어를 적극적으로 주고받으며 좋은 결과물을 만들어낼 수 있었습니다.',
+      'GSAP을 활용하여 스크롤 위치에 따라 요소가 회전하며 움직이는 스크롤 애니메이션과 콘텐츠가 컨베이어 벨트처럼 한쪽으로 흘러가는 무한 스크롤 애니메이션을 개발했습니다. 이 외에도 역동적이고 다채로운 사이트를 만들기 위해 다양한 애니메이션을 적용했습니다.',
+    ],
+    achievements: [
+      '회사 소개, 채용 공고 등 자사에 대한 다양한 정보를 한 곳에서 명확하게 제공함으로써 클라이언트와 지원자의 이해를 돕고 효율적인 커뮤니케이션 채널을 마련했습니다.',
+    ],
+    image: {
+      url: '/images/projects/yaylabs.png',
+    },
+    website: 'https://yaylabs.io',
   },
   // {
   //   title: 'starboys',
@@ -218,7 +230,7 @@ export const projects: Project[] = [
       start: new Date('2024-05'),
       end: new Date('2024-05'),
     },
-    teamSize: '디자인 및 프론트엔드 1명',
+    teamSize: '프론트엔드 1명',
     overview:
       '제 포트폴리오 용도로 만든 웹사이트이며 현재 보고 계신 이 사이트입니다.',
     details: [
