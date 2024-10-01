@@ -90,6 +90,37 @@ export const projects: Project[] = [
     ],
   },
   {
+    title: 'yaylabs',
+    stacks: [
+      'Next.js',
+      'React',
+      'HTML',
+      'CSS',
+      'Typescript',
+      'TailwindCSS',
+      'Redux Toolkit',
+      'GSAP',
+    ],
+    duration: {
+      start: new Date('2023-12'),
+      end: new Date('2024-01'),
+    },
+    teamSize: '프론트엔드 1명',
+    overview:
+      '예이랩스에 대한 소개와 팀원 정보, 채용 공고 등을 소개하는 예이랩스 자사 공식 웹사이트를 개발했습니다.',
+    details: [
+      '자사 공식 사이트인 만큼 디자인과 애니메이션에 있어 자유도가 높아, 디자이너와 애니메이션에 대한 아이디어를 적극적으로 주고받으며 좋은 결과물을 만들어낼 수 있었습니다.',
+      'GSAP를 활용하여 스크롤 위치에 따라 요소가 회전하며 움직이는 스크롤 애니메이션과 콘텐츠가 연속적으로 흐르는 marquee 애니메이션을 개발했습니다. 이 외에도 역동적이고 시각적으로 풍부한 사이트를 만들기 위해 다양한 애니메이션을 적용했습니다.',
+    ],
+    achievements: [
+      'SEO 최적화를 통해 회사 이름 키워드로 구글 검색 순위 1위를 달성하고 웹사이트 배포 후 1명의 지원자를 유도해 채용까지 연결시켰습니다.',
+    ],
+    image: {
+      url: '/images/projects/yaylabs.png',
+    },
+    website: 'https://yaylabs.io',
+  },
+  {
     title: 'ape universe',
     stacks: [
       'Next.js',
@@ -152,37 +183,6 @@ export const projects: Project[] = [
       url: '/images/projects/artivist.png',
     },
     website: 'https://artivistglobal.com',
-  },
-  {
-    title: 'yaylabs',
-    stacks: [
-      'Next.js',
-      'React',
-      'HTML',
-      'CSS',
-      'Typescript',
-      'TailwindCSS',
-      'Redux Toolkit',
-      'GSAP',
-    ],
-    duration: {
-      start: new Date('2023-12'),
-      end: new Date('2024-01'),
-    },
-    teamSize: '프론트엔드 1명',
-    overview:
-      '예이랩스에 대한 소개와 팀원 정보, 채용 공고 등을 소개하는 예이랩스 자사 공식 웹사이트를 개발했습니다.',
-    details: [
-      '자사 공식 사이트인 만큼 디자인과 애니메이션에 있어 자유도가 높아, 디자이너와 애니메이션에 대한 아이디어를 적극적으로 주고받으며 좋은 결과물을 만들어낼 수 있었습니다.',
-      'GSAP를 활용하여 스크롤 위치에 따라 요소가 회전하며 움직이는 스크롤 애니메이션과 콘텐츠가 연속적으로 흐르는 marquee 애니메이션을 개발했습니다. 이 외에도 역동적이고 시각적으로 풍부한 사이트를 만들기 위해 다양한 애니메이션을 적용했습니다.',
-    ],
-    achievements: [
-      'SEO 최적화를 통해 회사 이름 키워드로 구글 검색 순위 1위를 달성하고 웹사이트 배포 후 1명의 지원자를 유도해 채용까지 연결시켰습니다.',
-    ],
-    image: {
-      url: '/images/projects/yaylabs.png',
-    },
-    website: 'https://yaylabs.io',
   },
   // {
   //   title: 'starboys',
