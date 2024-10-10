@@ -72,7 +72,7 @@ export default function Introduction() {
               </Link>
             </article>
             <div className='flex flex-col xl:flex-row'>
-              <div className='flex xl:basis-2/3'>
+              <div className='flex xl:w-full'>
                 <div className='border-r border-black basis-1/2'>
                   <article className='px-4 py-5 border-b border-black lg:px-6 lg:py-7'>
                     <p className='mb-5 uppercase font-black text-lg leading-4 lg:text-2xl lg:leading-6'>
@@ -103,7 +103,7 @@ export default function Introduction() {
                     </p>
                   </article>
                 </div>
-                <div className='basis-1/2 xl:border-r xl:border-black'>
+                <div className='basis-1/2'>
                   <article className='px-4 py-5 border-b border-black lg:px-6 lg:py-7'>
                     <p className='mb-5 uppercase font-black text-lg leading-4 lg:text-2xl lg:leading-6'>
                       education
@@ -143,7 +143,7 @@ export default function Introduction() {
                   </article>
                 </div>
               </div>
-              <article className='px-4 py-5 border-t border-b border-black lg:px-6 lg:py-7 lg:border-b-0 xl:basis-1/3 xl:border-t-0'>
+              {/* <article className='px-4 py-5 border-t border-b border-black lg:px-6 lg:py-7 lg:border-b-0 xl:basis-1/3 xl:border-t-0'>
                 <p className='mb-5 uppercase font-black text-lg leading-4 lg:text-2xl lg:leading-6'>
                   contact
                 </p>
@@ -162,10 +162,10 @@ export default function Introduction() {
                     </Link>
                   </Fragment>
                 ))}
-              </article>
+              </article> */}
             </div>
           </div>
-          <div className='px-4 py-5 lg:basis-1/2 lg:px-6 lg:py-7 xl:basis-2/5'>
+          <div className='px-4 py-5 border-t border-black lg:border-t-0 lg:basis-1/2 lg:px-6 lg:py-7 xl:basis-2/5'>
             <p className='mb-5 uppercase font-black text-lg leading-4 lg:text-2xl lg:leading-6'>
               skills
             </p>
