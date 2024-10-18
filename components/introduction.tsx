@@ -59,8 +59,10 @@ export default function Introduction() {
               <p className='mb-5 uppercase font-black text-lg leading-4 lg:text-2xl lg:leading-6'>
                 juhee
               </p>
-              <p className='leading-normal lg:text-xl'>{introduction}</p>
-              <Link
+              <p className='leading-normal lg:text-xl lg:mb-[96px]'>
+                {introduction}
+              </p>
+              {/* <Link
                 className='flex justify-between items-center w-[136px] px-5 mt-5 py-1 bg-purple-100 lg:w-[156px] lg:mt-20 lg:px-5 lg:py-3'
                 href='/pdf/서주희_이력서.pdf'
                 target='_blank'
@@ -69,7 +71,7 @@ export default function Introduction() {
                   resume
                 </span>
                 <ArrowDownTrayIcon className='w-[18px] h-[18px] stroke-purple-800 stroke-[3px] lg:w-5 lg:h-5' />
-              </Link>
+              </Link> */}
             </article>
             <div className='flex flex-col xl:flex-row'>
               <div className='flex xl:basis-2/3'>
