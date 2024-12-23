@@ -89,37 +89,37 @@ export const projects: Project[] = [
       '스마트 컨트랙트와의 상호작용을 통해 민팅 트랜잭션 로직을 구현하여 블록체인 기술에 대한 이해를 높일 수 있었습니다.',
     ],
   },
-  {
-    title: 'yaylabs',
-    stacks: [
-      'Next.js',
-      'React',
-      'HTML',
-      'CSS',
-      'Typescript',
-      'TailwindCSS',
-      'Redux Toolkit',
-      'GSAP',
-    ],
-    duration: {
-      start: new Date('2023-12'),
-      end: new Date('2024-01'),
-    },
-    teamSize: '프론트엔드 1명',
-    overview:
-      '예이랩스에 대한 소개와 팀원 정보, 채용 공고 등을 소개하는 예이랩스 자사 공식 웹사이트를 개발했습니다.',
-    details: [
-      '자사 공식 사이트인 만큼 디자인과 애니메이션에 있어 자유도가 높아, 디자이너와 애니메이션에 대한 아이디어를 적극적으로 주고받으며 좋은 결과물을 만들어낼 수 있었습니다.',
-      'GSAP를 활용하여 스크롤 위치에 따라 요소가 회전하며 움직이는 스크롤 애니메이션과 콘텐츠가 연속적으로 흐르는 marquee 애니메이션을 개발했습니다. 이 외에도 역동적이고 시각적으로 풍부한 사이트를 만들기 위해 다양한 애니메이션을 적용했습니다.',
-    ],
-    achievements: [
-      'SEO 최적화를 통해 회사 이름 키워드로 구글 검색 순위 1위를 달성하고 웹사이트 배포 후 1명의 지원자를 유도해 채용까지 연결시켰습니다.',
-    ],
-    image: {
-      url: '/images/projects/yaylabs.png',
-    },
-    website: 'https://yaylabs.io',
-  },
+  // {
+  //   title: 'yaylabs',
+  //   stacks: [
+  //     'Next.js',
+  //     'React',
+  //     'HTML',
+  //     'CSS',
+  //     'Typescript',
+  //     'TailwindCSS',
+  //     'Redux Toolkit',
+  //     'GSAP',
+  //   ],
+  //   duration: {
+  //     start: new Date('2023-12'),
+  //     end: new Date('2024-01'),
+  //   },
+  //   teamSize: '프론트엔드 1명',
+  //   overview:
+  //     '예이랩스에 대한 소개와 팀원 정보, 채용 공고 등을 소개하는 예이랩스 자사 공식 웹사이트를 개발했습니다.',
+  //   details: [
+  //     '자사 공식 사이트인 만큼 디자인과 애니메이션에 있어 자유도가 높아, 디자이너와 애니메이션에 대한 아이디어를 적극적으로 주고받으며 좋은 결과물을 만들어낼 수 있었습니다.',
+  //     'GSAP를 활용하여 스크롤 위치에 따라 요소가 회전하며 움직이는 스크롤 애니메이션과 콘텐츠가 연속적으로 흐르는 marquee 애니메이션을 개발했습니다. 이 외에도 역동적이고 시각적으로 풍부한 사이트를 만들기 위해 다양한 애니메이션을 적용했습니다.',
+  //   ],
+  //   achievements: [
+  //     'SEO 최적화를 통해 회사 이름 키워드로 구글 검색 순위 1위를 달성하고 웹사이트 배포 후 1명의 지원자를 유도해 채용까지 연결시켰습니다.',
+  //   ],
+  //   image: {
+  //     url: '/images/projects/yaylabs.png',
+  //   },
+  //   website: 'https://yaylabs.io',
+  // },
   {
     title: 'ape universe',
     stacks: [
@@ -212,7 +212,7 @@ export const projects: Project[] = [
   //   website: 'https://starboysnft.io',
   // },
   {
-    title: 'portfolio',
+    title: '산타 우체통',
     stacks: [
       'Next.js',
       'React',
@@ -220,29 +220,68 @@ export const projects: Project[] = [
       'CSS',
       'Typescript',
       'TailwindCSS',
-      'GSAP',
+      'React Query',
+      'AWS',
+      'MongoDB',
+      'OpenAI',
+      'Nodemailer',
     ],
     duration: {
-      start: new Date('2024-05'),
-      end: new Date('2024-05'),
+      start: new Date('2024-12'),
+      end: new Date('2024-12'),
     },
     teamSize: '프론트엔드 1명',
     overview:
-      '제 포트폴리오 용도로 만든 웹사이트이며 현재 보고 계신 이 사이트입니다.',
+      'AI 산타에게 편지를 쓰고, 크리스마스에 특별한 답장을 받을 수 있는 서비스입니다.',
     details: [
-      '이 프로젝트는 제 자신을 PR하기 위한 사이트로, 디자인부터 신중하게 작업했습니다.',
-      '초기에는 올해의 UI/UX 트렌드를 반영해 3D 에셋을 메인 요소로 사용하려 했으나, 3D 에셋과 어울리는 레이아웃을 구성하는 것이 쉽지 않아 컨셉을 변경했습니다. 작업하는 과정에서 즐거움을 느낄 수 있도록 귀엽고 따뜻한 컨셉을 메인으로 잡았으며, 키 컬러로는 제가 좋아하는 보라색 계열을 선택했습니다. 메인 섹션에는 텍스트와 에셋에 애니메이션을 추가하여 귀여움을 더욱 강조했습니다.',
-      '가독성을 고려한 레이아웃 구성과 내용 정리가 쉽지 않았지만, 모든 과정을 제 의도대로 진행할 수 있어 매우 즐거운 프로젝트였습니다.',
+      '지인들에게 소소한 크리스마스 선물을 전하고자 기획한 서비스입니다.',
+      '잘못된 이메일 주소 입력을 방지하기 위해 JWT 토큰과 Nodemailer를 활용한 이메일 인증 기능을 구현했습니다. 산타의 답장은 OpenAI API를 통해 자동으로 생성되며, 따뜻한 위로와 공감을 담은 내용을 전달하기 위해 칭찬, 공감, 격려를 중심으로 프롬프트를 작성했습니다.',
+      '예약 메일 발송 기능은 AWS Lambda와 EventBridge를 사용해 안정적으로 구현했습니다. 초기에는 Vercel의 Cron Job을 활용하려 했지만, 무료 플랜에서 작업 실행 시간이 10초로 제한된다는 점을 확인하고 AWS로 전환했습니다.',
+      '약 100건의 예약 메일 발송 테스트를 통해 안정성을 확보한 뒤 서비스를 배포했습니다.',
     ],
     achievements: [
-      '이 사이트를 성공적으로 배포하여 여러분에게 저를 소개할 수 있었습니다.',
+      '다수의 사용자로부터 "귀엽다", "신기하다"는 긍정적인 피드백을 받으며, 기획 의도와 따뜻한 메시지를 효과적으로 전달했습니다.',
     ],
     image: {
-      url: '/images/projects/portfolio.png',
+      url: '/images/projects/santa-mailbox.png',
     },
-    website: 'https://juhee-portfolio.vercel.app/',
-    github: 'https://github.com/maywngml/2024-portfolio',
+    website: 'https://santa-mailbox.site/',
+    github: 'https://github.com/maywngml/santa-mailbox',
     figma:
-      'https://www.figma.com/design/uL3Vu4UTsDCRXTydn1EXxB/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4?node-id=247-3&t=rl3yLsTubONjvBUG-1',
+      'https://www.figma.com/design/vmUugDyB9ebHL8VWxGXtRD/%ED%81%AC%EB%A6%AC%EC%8A%A4%EB%A7%88%EC%8A%A4-%EC%9A%B0%EC%B2%B4%ED%86%B5?node-id=0-1&t=TUGFJmOKlUcDSfWS-1',
   },
+  // {
+  //   title: 'portfolio',
+  //   stacks: [
+  //     'Next.js',
+  //     'React',
+  //     'HTML',
+  //     'CSS',
+  //     'Typescript',
+  //     'TailwindCSS',
+  //     'GSAP',
+  //   ],
+  //   duration: {
+  //     start: new Date('2024-05'),
+  //     end: new Date('2024-05'),
+  //   },
+  //   teamSize: '프론트엔드 1명',
+  //   overview:
+  //     '제 포트폴리오 용도로 만든 웹사이트이며 현재 보고 계신 이 사이트입니다.',
+  //   details: [
+  //     '이 프로젝트는 제 자신을 PR하기 위한 사이트로, 디자인부터 신중하게 작업했습니다.',
+  //     '초기에는 올해의 UI/UX 트렌드를 반영해 3D 에셋을 메인 요소로 사용하려 했으나, 3D 에셋과 어울리는 레이아웃을 구성하는 것이 쉽지 않아 컨셉을 변경했습니다. 작업하는 과정에서 즐거움을 느낄 수 있도록 귀엽고 따뜻한 컨셉을 메인으로 잡았으며, 키 컬러로는 제가 좋아하는 보라색 계열을 선택했습니다. 메인 섹션에는 텍스트와 에셋에 애니메이션을 추가하여 귀여움을 더욱 강조했습니다.',
+  //     '가독성을 고려한 레이아웃 구성과 내용 정리가 쉽지 않았지만, 모든 과정을 제 의도대로 진행할 수 있어 매우 즐거운 프로젝트였습니다.',
+  //   ],
+  //   achievements: [
+  //     '이 사이트를 성공적으로 배포하여 여러분에게 저를 소개할 수 있었습니다.',
+  //   ],
+  //   image: {
+  //     url: '/images/projects/portfolio.png',
+  //   },
+  //   website: 'https://juhee-portfolio.vercel.app/',
+  //   github: 'https://github.com/maywngml/2024-portfolio',
+  //   figma:
+  //     'https://www.figma.com/design/uL3Vu4UTsDCRXTydn1EXxB/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4?node-id=247-3&t=rl3yLsTubONjvBUG-1',
+  // },
 ];
