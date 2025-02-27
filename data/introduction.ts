@@ -42,7 +42,7 @@ export const study: Study = {
 export const contacts: Contact[] = [
   {
     title: 'phone',
-    content: '+82)010-4640-6319',
+    content: '+82) 010-4640-6319',
     url: 'tel:+82-010-4640-6319',
   },
   {
