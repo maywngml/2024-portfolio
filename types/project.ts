@@ -11,7 +11,7 @@ export type Project = {
   title: string;
   stacks: string[];
   duration: Duration;
-  teamSize: string;
+  // teamSize: string;
   overview: string;
   details: string[];
   achievements: string[];

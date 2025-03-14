@@ -4,7 +4,7 @@ import { Tektur } from 'next/font/google';
 import cn from 'clsx';
 import { GlobeAltIcon } from '@heroicons/react/24/outline';
 import { ImageWithPlaceholder } from '.';
-import { getFormattedDate } from '@/lib/utils/helpers';
+import { getFormattedDate, getMonthDifference } from '@/lib/utils/helpers';
 import type { Project } from '@/types/project';
 
 interface ProjectProps {
@@ -19,7 +19,7 @@ export default function Project({ project, index }: ProjectProps) {
     title,
     stacks,
     duration,
-    teamSize,
+    // teamSize,
     overview,
     details,
     achievements,
@@ -128,11 +128,12 @@ export default function Project({ project, index }: ProjectProps) {
             ))}
           </div>
           <p className='mb-2 font-bold text-xl leading-5 lg:text-2xl lg:leading-6'>
-            Duration & Team Size
+            Duration
           </p>
           <p className='mb-8 leading-normal lg:mb-10'>
             {getFormattedDate(duration.start)} ~{' '}
-            {getFormattedDate(duration.end)} / {teamSize}
+            {getFormattedDate(duration.end)} (
+            {getMonthDifference(duration.start, duration.end)}개월)
           </p>
           <p className='mb-2 font-bold text-xl leading-5 lg:text-2xl lg:leading-6'>
             OverView
