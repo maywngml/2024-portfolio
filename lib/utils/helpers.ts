@@ -17,3 +17,10 @@ export function getFormattedDate(date: Date) {
   const month = (date.getMonth() + 1).toString().padStart(2, '0');
   return `${year}.${month}`;
 }
+
+export function getMonthDifference(startDate: Date, lastDate: Date) {
+  const yearDifference = lastDate.getFullYear() - startDate.getFullYear();
+  const monthDifference = lastDate.getMonth() - startDate.getMonth();
+
+  return yearDifference * 12 + monthDifference + 1;
+}
