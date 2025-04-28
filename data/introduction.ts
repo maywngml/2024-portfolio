@@ -40,11 +40,11 @@ export const study: Study = {
 };
 
 export const contacts: Contact[] = [
-  {
-    title: 'phone',
-    content: '+82) 010-4640-6319',
-    url: 'tel:+82-010-4640-6319',
-  },
+  // {
+  //   title: 'phone',
+  //   content: '+82) 010-4640-6319',
+  //   url: 'tel:+82-010-4640-6319',
+  // },
   {
     title: 'email',
     content: 'sjuhee9712@gmail.com',
@@ -54,6 +54,11 @@ export const contacts: Contact[] = [
     title: 'github',
     content: 'https://github.com/maywngml',
     url: 'https://github.com/maywngml',
+  },
+  {
+    title: 'blog',
+    content: 'https://velog.io/@sjuhee97/posts',
+    url: 'https://velog.io/@sjuhee97/posts',
   },
 ];
 
