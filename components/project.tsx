@@ -45,7 +45,7 @@ export default function Project({ project, index }: ProjectProps) {
             className={cn(
               tektur.className,
               image && 'mb-8 lg:mb-10',
-              'uppercase font-black text-[34px] leading-[34px] lg:text-[50px] lg:leading-[50px] xl:text-[60px] xl:leading-[60px]',
+              'uppercase font-black text-[34px] leading-[34px] lg:text-[50px] lg:leading-[50px] xl:text-[60px] xl:leading-[60px]'
             )}
           >
             {index.toString().padStart(2, '0')}. {title}
@@ -136,7 +136,7 @@ export default function Project({ project, index }: ProjectProps) {
             {getMonthDifference(duration.start, duration.end)}개월)
           </p> */}
           <p className='mb-2 font-bold text-xl leading-5 lg:text-2xl lg:leading-6'>
-            OverView
+            Overview
           </p>
           <p className='mb-8 leading-normal lg:mb-10'>{overview}</p>
           <p className='mb-2 font-bold text-xl leading-5 lg:text-2xl lg:leading-6'>
