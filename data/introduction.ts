@@ -101,7 +101,7 @@ export const skills: Skill[] = [
       },
       {
         icon: '/images/skills/tailwindcss.svg',
-        title: 'TailwindCSS',
+        title: 'Tailwind CSS',
       },
     ],
   },
@@ -123,7 +123,7 @@ export const skills: Skill[] = [
       },
       {
         icon: '/images/skills/github.svg',
-        title: 'Github',
+        title: 'GitHub',
       },
     ],
   },
