@@ -237,7 +237,7 @@ export const projects: Project[] = [
       'CSS',
       'TypeScript',
       'Tailwind CSS',
-      'React Query',
+      'TanStack Query',
       'AWS Lambda',
       'MongoDB',
     ],
