@@ -153,7 +153,7 @@ export const projects: Project[] = [
     image: {
       url: '/images/projects/ape-universe.png',
     },
-    website: 'https://apeuniversebystarboys.xyz',
+    // website: 'https://apeuniversebystarboys.xyz',
   },
   {
     title: 'artivist',
