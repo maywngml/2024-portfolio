@@ -145,7 +145,7 @@ export default function Project({ project, index }: ProjectProps) {
           <div className='mb-8 lg:mb-10'>
             {details.map((detail, index) => (
               <p
-                className='leading-normal lg:mb-[6px]'
+                className='leading-normal mb-[6px] lg:mb-[10px]'
                 key={`${project.title} 상세 설명 ${index}`}
               >
                 {detail}
